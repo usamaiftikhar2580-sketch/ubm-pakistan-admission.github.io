@@ -148,135 +148,154 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 
 <style>
 .student-reviews {
-  background: #10161a;
-  padding: 55px 20px;
+  background: #0b1114;
+  padding: 70px 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 .student-reviews-inner {
-  max-width: 900px;
-  margin: auto;
+  max-width: 1050px;
+  margin: 0 auto;
 }
 
-.student-reviews-title {
+.student-reviews-heading {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 42px;
 }
 
-.student-reviews-title h2 {
-  color: #fff;
-  font-size: 32px;
-  margin: 0 0 8px;
+.student-reviews-heading h2 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 34px;
   font-weight: 800;
 }
 
-.student-reviews-title h2 span {
-  color: #d6b35a;
+.student-reviews-heading h2 span {
+  color: var(--g);
 }
 
-.student-reviews-title p {
-  color: #aeb8be;
+.student-reviews-heading p {
   margin: 0;
-  font-size: 14px;
+  color: #9da9af;
+  font-size: 15px;
 }
 
-.student-review-card {
-  max-width: 700px;
-  margin: auto;
-  background: #172127;
+.student-review-box {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 32px;
+  background: #111a1f;
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 18px;
-  padding: 25px;
   display: flex;
   align-items: center;
-  gap: 22px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+  gap: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.student-review-photo-wrap {
+  flex: 0 0 105px;
+  text-align: center;
 }
 
 .student-review-photo {
-  width: 90px;
-  height: 90px;
-  min-width: 90px;
+  width: 105px;
+  height: 105px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #d6b35a;
+  border: 3px solid var(--g);
+  display: block;
+}
+
+.student-review-content {
+  flex: 1;
 }
 
 .student-review-stars {
-  color: #f5c84b;
-  font-size: 19px;
-  letter-spacing: 2px;
-  margin-bottom: 7px;
-}
-
-.student-review-text {
-  color: #e8edef;
-  font-size: 15px;
-  line-height: 1.7;
-  margin: 0 0 10px;
-}
-
-.student-review-name {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 800;
-  margin: 0;
-}
-
-.student-review-course {
-  color: #9da9af;
-  font-size: 13px;
-  margin-top: 3px;
-}
-
-.student-write-review {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.student-write-review p {
-  color: #aeb8be;
-  font-size: 14px;
+  color: var(--g);
+  font-size: 18px;
+  letter-spacing: 3px;
   margin-bottom: 12px;
 }
 
-.student-write-review a {
-  display: inline-block;
-  background: #d6b35a;
-  color: #10161a;
-  padding: 11px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 800;
+.student-review-text {
+  color: #e6ecef;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0 0 16px;
 }
 
-.student-write-review a:hover {
-  opacity: 0.9;
+.student-review-name {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+  margin: 0 0 3px;
+}
+
+.student-review-role {
+  color: #89969c;
+  font-size: 13px;
+  margin: 0;
+}
+
+.student-review-action {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.student-review-action p {
+  color: #9da9af;
+  font-size: 14px;
+  margin: 0 0 14px;
+}
+
+.student-review-action a {
+  display: inline-block;
+  background: var(--g);
+  color: #0b1114;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.student-review-action a:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
 }
 
 @media (max-width: 650px) {
 
   .student-reviews {
-    padding: 45px 15px;
+    padding: 55px 15px;
   }
 
-  .student-reviews-title h2 {
-    font-size: 27px;
+  .student-reviews-heading h2 {
+    font-size: 28px;
   }
 
-  .student-review-card {
+  .student-review-box {
     flex-direction: column;
     text-align: center;
-    padding: 22px 18px;
+    padding: 26px 20px;
+    gap: 20px;
+  }
+
+  .student-review-photo-wrap {
+    flex-basis: auto;
   }
 
   .student-review-photo {
-    width: 82px;
-    height: 82px;
-    min-width: 82px;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
   }
 
   .student-review-text {
     font-size: 14px;
+    line-height: 1.7;
   }
 
 }
@@ -286,24 +305,25 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 
   <div class="student-reviews-inner">
 
-    <div class="student-reviews-title">
+    <div class="student-reviews-heading">
       <h2>Student <span>Reviews</span></h2>
 
       <p>
-        What our students say about their experience with UBM Pakistan.
+        Real feedback from students learning with UBM Pakistan.
       </p>
     </div>
 
+    <div class="student-review-box">
 
-    <div class="student-review-card">
+      <div class="student-review-photo-wrap">
+        <img
+          src="rahab.jpg"
+          alt="Rahab - UBM Pakistan Student"
+          class="student-review-photo"
+        >
+      </div>
 
-      <img
-        src="rahab.jpg"
-        alt="Rahab - UBM Pakistan Student"
-        class="student-review-photo"
-      >
-
-      <div>
+      <div class="student-review-content">
 
         <div class="student-review-stars">
           ★★★★★
@@ -319,16 +339,15 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
           Rahab
         </p>
 
-        <div class="student-review-course">
+        <p class="student-review-role">
           UBM Pakistan Student
-        </div>
+        </p>
 
       </div>
 
     </div>
 
-
-    <div class="student-write-review">
+    <div class="student-review-action">
 
       <p>
         Have you learned with UBM Pakistan? Share your experience with us.
