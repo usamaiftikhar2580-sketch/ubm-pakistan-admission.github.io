@@ -146,42 +146,228 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <a href="mailto:contact.ubmpakistan@gmail.com"><b>✉️ Email</b><span>contact.ubmpakistan@gmail.com</span></a></div></div></section>
 <!-- STUDENT REVIEWS SECTION START -->
 
-<section class="student-reviews">
+<style>
+  .ubm-student-reviews {
+    background: #0b1114;
+    padding: 75px 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
 
-  <div class="student-reviews-inner">
+  .ubm-reviews-inner {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
 
-    <div class="student-reviews-heading">
+  .ubm-reviews-heading {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .ubm-reviews-heading h2 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .ubm-reviews-heading h2 span {
+    color: var(--g, #00e5a8);
+  }
+
+  .ubm-reviews-heading p {
+    margin: 0;
+    color: #9da9af;
+    font-size: 15px;
+  }
+
+  .ubm-review-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 34px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    background: linear-gradient(
+      145deg,
+      #121d22,
+      #0e171b
+    );
+
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 20px;
+
+    box-shadow:
+      0 20px 50px rgba(0,0,0,0.30),
+      inset 0 1px 0 rgba(255,255,255,0.03);
+  }
+
+  .ubm-review-photo-wrap {
+    flex: 0 0 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ubm-review-photo {
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
+    display: block;
+
+    border-radius: 50%;
+    border: 3px solid var(--g, #00e5a8);
+
+    box-shadow:
+      0 0 0 6px rgba(0,229,168,0.08),
+      0 10px 30px rgba(0,0,0,0.35);
+  }
+
+  .ubm-review-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ubm-review-stars {
+    color: #ffc107;
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+  }
+
+  .ubm-review-text {
+    color: #e7edef;
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 0 0 18px;
+  }
+
+  .ubm-review-name {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0 0 4px;
+  }
+
+  .ubm-review-role {
+    color: var(--g, #00e5a8);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .ubm-review-action {
+    text-align: center;
+    margin-top: 35px;
+  }
+
+  .ubm-review-action p {
+    color: #9da9af;
+    font-size: 14px;
+    margin: 0 0 18px;
+  }
+
+  .ubm-review-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 13px 24px;
+
+    color: #07110e;
+    background: var(--g, #00e5a8);
+
+    border-radius: 10px;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  }
+
+  .ubm-review-button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  }
+
+  @media (max-width: 700px) {
+
+    .ubm-student-reviews {
+      padding: 55px 16px;
+    }
+
+    .ubm-reviews-heading h2 {
+      font-size: 29px;
+    }
+
+    .ubm-review-card {
+      padding: 25px 20px;
+      flex-direction: column;
+      text-align: center;
+      gap: 22px;
+    }
+
+    .ubm-review-photo-wrap {
+      flex: none;
+    }
+
+    .ubm-review-photo {
+      width: 105px;
+      height: 105px;
+    }
+
+    .ubm-review-stars {
+      font-size: 20px;
+    }
+
+    .ubm-review-text {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+  }
+</style>
+
+<section class="ubm-student-reviews">
+
+  <div class="ubm-reviews-inner">
+
+    <div class="ubm-reviews-heading">
       <h2>Student <span>Reviews</span></h2>
       <p>Real feedback from students learning with UBM Pakistan.</p>
     </div>
 
-    <div class="student-review-box">
+    <div class="ubm-review-card">
 
-      <div class="student-review-photo-wrap">
+      <div class="ubm-review-photo-wrap">
         <img
           src="./rahab.jpg"
           alt="Rahab - UBM Pakistan Student"
-          class="student-review-photo"
+          class="ubm-review-photo"
         >
       </div>
 
-      <div class="student-review-content">
+      <div class="ubm-review-content">
 
-        <div class="student-review-stars">
+        <div class="ubm-review-stars">
           ★★★★★
         </div>
 
-        <p class="student-review-text">
+        <p class="ubm-review-text">
           “UBM Pakistan has provided a very helpful learning experience.
           The training is practical, easy to understand and focused on
           real skills that students can use to grow online.”
         </p>
 
-        <p class="student-review-name">
+        <p class="ubm-review-name">
           Rahab
         </p>
 
-        <p class="student-review-role">
+        <p class="ubm-review-role">
           UBM Pakistan Student
         </p>
 
@@ -189,7 +375,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 
     </div>
 
-    <div class="student-review-action">
+    <div class="ubm-review-action">
 
       <p>
         Have you learned with UBM Pakistan? Share your experience with us.
@@ -198,6 +384,8 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
       <a
         href="https://wa.me/923040880992?text=Assalam-o-Alaikum%2C%20I%20want%20to%20share%20my%20review%20about%20UBM%20Pakistan."
         target="_blank"
+        rel="noopener noreferrer"
+        class="ubm-review-button"
       >
         ✍️ Write a Review
       </a>
