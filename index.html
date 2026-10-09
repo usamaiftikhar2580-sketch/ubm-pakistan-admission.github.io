@@ -164,9 +164,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <div class="stat"><b data-n="6">0</b><small>Professional Courses</small></div><div class="stat"><b>Practical</b><small>Hands-on Training</small></div>
 <div class="stat"><b>Lifetime</b><small>Student Support</small></div><div class="stat"><b>Learn &amp; Earn</b><small>Real-World Results</small></div></div></section>
 
-<section id="courses"><div class="w"><h2>Our <span>Courses</span></h2><p class="sub">Kisi bhi course par click karein aur uski poori details dekhein.</p><div class="grid" id="cg"></div></div></section>
+<section id="courses" class="founder-section">
+  <div class="w founder-container">
 
-<section class="alt" id="services"><div class="w"><h2>Our <span>Programs &amp; Services</span></h2><p class="sub">Affordable Learning - Real World Skills</p>
+    <div class="founder-image">
+      <img src="founder.png" alt="UBM Pakistan Founder">
+    </div>
+
+    <div class="founder-content">
+      <span class="founder-label">UBM PAKISTAN</span>
+      <h2>Meet the <span>Founder</span></h2>
+      <h3>Usman Iftikhar</h3>
+      <p class="founder-role">Founder &amp; CEO, UBM Pakistan</p>
+      <p>Helping students learn practical digital skills and build opportunities through e-commerce, freelancing and online business.</p>
+      <a class="btn" href="https://wa.me/923040880992">Contact Us</a>
+    </div>
+
+  </div>
+</section>
+ class="alt" id="services"><div class="w"><h2>Our <span>Programs &amp; Services</span></h2><p class="sub">Affordable Learning - Real World Skills</p>
 <div class="two"><div class="card"><div class="ic">🎓</div><h3>Training Programs</h3><p>Learn practical, in-demand digital skills with guidance from experienced mentors. Our aim is to build an entrepreneurial mindset and turn learners into confident freelancers and online business owners.</p><a class="btn" href="#courses">Explore Our Courses</a></div>
 <div class="card"><div class="ic">🛠️</div><h3>Services</h3><p>Beyond training, UBM Pakistan supports individuals and businesses in building and growing their online presence and e-commerce brands, from the first idea to execution. Contact us to discuss what you need.</p><a class="btn" href="https://wa.me/923040880992">Our Services</a></div></div>
 <div class="hl"><div>🏆<b>Quality</b><small>Education</small></div><div>🤝<b>Lifetime</b><small>Support</small></div><div>🎯<b>Real World</b><small>Results</small></div><div>💰<b>Learn</b><small>&amp; Earn</small></div></div></div></section>
@@ -1010,4 +1026,70 @@ af.style.display="none";$("#admissionNo").textContent="Admission No: "+res.admis
 catch(err){sb.className="status error";sb.textContent="Submission failed. Please try again or contact UBM Pakistan.";sbtn.disabled=false;sbtn.textContent="Submit Admission Application"}});
 var _o=open_;open_=function(k){_o(k);$("#ma").style.display=C[k].n=="eBay Bootcamp"?"inline-flex":"none"};
 $("#ma").onclick=function(){$("#md").classList.remove("on")};
-</script></body></html>
+</script>
+<style>
+.founder-section {
+  padding: 70px 0;
+}
+
+.founder-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.founder-image {
+  max-width: 460px;
+  margin: auto;
+}
+
+.founder-image img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: 650px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.2);
+}
+
+.founder-content h2 {
+  margin: 16px 0;
+}
+
+.founder-content h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.founder-content p {
+  line-height: 1.8;
+}
+
+.founder-label {
+  color: #c99b3b;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.founder-role {
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .founder-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .founder-image {
+    max-width: 350px;
+  }
+
+  .founder-content {
+    text-align: center;
+  }
+}
+</style></body></html>
