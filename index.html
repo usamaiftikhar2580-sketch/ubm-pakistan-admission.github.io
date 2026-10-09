@@ -154,7 +154,55 @@ object-position: center bottom;
 }
 </style>
 
-</style></head><link rel="stylesheet"
+</style> <style>
+/* Fix hero section clipping */
+header.hero#home {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding-bottom: 60px !important;
+}
+
+header.hero#home > .w {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  align-items: center !important;
+}
+
+header.hero#home .hero-photo {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  align-self: stretch !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+}
+
+header.hero#home .hero-man {
+  display: block !important;
+  width: 100% !important;
+  max-width: 460px !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+}
+
+@media (max-width: 768px) {
+  header.hero#home {
+    padding-bottom: 35px !important;
+  }
+
+  header.hero#home .hero-man {
+    max-width: 330px !important;
+  }
+}
+</style>
+</head><link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><body>
 <div class="top"><div class="w"><span>🟢 UBM Pakistan - Learn &amp; Earn</span><span class="top-contact">
 
