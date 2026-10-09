@@ -117,7 +117,8 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 #admission .ok{width:70px;height:70px;border-radius:50%;background:#19351d;color:var(--g);display:grid;place-items:center;margin:0 auto 16px;font-size:34px}
 #admission .an{margin-top:16px;color:var(--g);font-size:20px;font-weight:800}@media(max-width:700px){#admission .ag{grid-template-columns:1fr}#admission .full{grid-column:auto}#admission form{padding:20px 16px}}
 <style>
-/* Hero section: allow full image to show */
+```css
+/* Hero section */
 header.hero#home {
   height: auto !important;
   min-height: 0 !important;
@@ -137,6 +138,7 @@ header.hero#home > .w {
   overflow: visible !important;
 }
 
+/* Picture container */
 header.hero#home .hero-photo {
   display: flex !important;
   align-items: flex-end !important;
@@ -153,7 +155,7 @@ header.hero#home .hero-photo {
   box-shadow: none !important;
 }
 
-```css
+/* Only the picture */
 header.hero#home .hero-man {
   display: block !important;
   width: 100% !important;
@@ -162,23 +164,32 @@ header.hero#home .hero-man {
   max-height: none !important;
   object-fit: contain !important;
   object-position: center bottom !important;
-  transform: scale(1.15) !important;
+  transform: translateY(15px) scale(1.08) !important;
+  transform-origin: center bottom !important;
   position: relative !important;
-top: 20px !important; margin: 0 !important;
-}
-```
-
-  display: block !important;
-  width: 100% !important;
-  max-width: 500px !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  object-position: center bottom !important;
+  margin: 0 !important;
 }
 
-
+/* Mobile screen */
 @media (max-width: 768px) {
+  header.hero#home {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+  }
+
+  header.hero#home > .w {
+    grid-template-columns: 1fr !important;
+  }
+
+  header.hero#home .hero-photo {
+    min-height: 0 !important;
+  }
+
+  header.hero#home .hero-man {
+    max-width: 330px !important;
+  }
+}
+
   header.hero#home {
     padding-top: 35px !important;
     padding-bottom: 35px !important;
