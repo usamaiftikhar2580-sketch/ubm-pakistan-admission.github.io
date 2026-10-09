@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Course Details | UBM Pakistan</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080d0f;color:#fff;font-family:Arial,sans-serif;line-height:1.7}
+.wrap{width:min(1050px,92%);margin:auto}
+nav{padding:20px 0;border-bottom:1px solid #263229;background:#0c1112}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-size:22px;font-weight:800;text-decoration:none}
+.brand span,h1 span,h2 span{color:#70df42}
+a{color:inherit}
+.back{color:#70df42;text-decoration:none;font-weight:bold}
+.hero{padding:65px 0;background:radial-gradient(ellipse at 85% 20%,#18321a,transparent 45%),#0b1112}
+.label{color:#70df42;font-weight:bold;font-size:12px;letter-spacing:2px}
+h1{font-size:clamp(36px,6vw,60px);line-height:1.15;margin:15px 0}
+.lead{color:#cbd4ce;font-size:18px;max-width:720px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin:25px 0}
+.pill,.chip{padding:8px 13px;border:1px solid #31552b;border-radius:30px;color:#cfe8c7;font-size:13px}
+.btn{display:inline-block;background:#70df42;color:#071007;text-decoration:none;font-weight:bold;padding:12px 20px;border-radius:30px}
+section{padding:50px 0}
+h2{font-size:clamp(26px,4vw,36px);line-height:1.2}
+.sub{color:#bac5bd;margin-bottom:25px}
+.outcomes,.weeks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.outcome,.week,.project,.cta{background:#101718;border:1px solid #2d482b;border-radius:15px;padding:20px}
+.outcome{display:flex;gap:12px}
+.outcome b{color:#70df42}
+#syllabus{background:#0b1112}
+.week{transition:transform .2s,border-color .2s}
+.week:hover{transform:translateY(-4px);border-color:#70df42}
+.week small{color:#70df42;font-weight:bold;letter-spacing:1px}
+.week h3{font-size:19px;margin:8px 0}
+ul{padding-left:20px;color:#c2cbc5}
+li{margin:7px 0}
+.project p,.cta p{color:#c2cbc5}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.cta{text-align:center;padding:35px 20px}
+footer{border-top:1px solid #263229;padding:22px 0;color:#9eaaa1;font-size:13px}
+@media(max-width:600px){.outcomes,.weeks{grid-template-columns:1fr}.hero{padding:45px 0}section{padding:38px 0}nav .brand{font-size:18px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="wrap">
+  <a class="brand" href="index.html">UBM <span>Pakistan</span></a>
+  <a class="back" href="index.html#ubm-courses">← All Courses</a>
+ </div>
+</nav>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="label">UBM PAKISTAN • LEARN & EARN</div>
+  <h1 id="courseTitle">Course <span>Details</span></h1>
+  <p class="lead" id="description"></p>
+  <div class="pills">
+   <span class="pill">Duration: 3 Months</span>
+   <span class="pill">12-Week Syllabus</span>
+   <span class="pill">Practical Project</span>
+  </div>
+  <a class="btn" href="index.html#ubm-courses">Explore All Courses</a>
+ </div>
+</header>
+
+<main>
+ <section>
+  <div class="wrap">
+   <h2>What You'll <span>Learn</span></h2>
+   <p class="sub">Skills you will practice during this course.</p>
+   <div class="outcomes" id="outcomes"></div>
+  </div>
+ </section>
+
+ <section id="syllabus">
+  <div class="wrap">
+   <h2>3-Month <span>Course Syllabus</span></h2>
+   <p class="sub">Six learning modules, with two weeks dedicated to each module.</p>
+   <div class="weeks" id="weeks"></div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap project">
+   <div class="label">PRACTICAL LEARNING</div>
+   <h2>Your <span>Final Project</span></h2>
+   <p id="project"></p>
+   <h3>Potential Career Paths</h3>
+   <div class="chips" id="careers"></div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap cta">
+   <div class="label">START YOUR LEARNING JOURNEY</div>
+   <h2>Build Your <span>Future</span></h2>
+   <p>Contact UBM Pakistan to ask about course fees, upcoming batches and class timings.</p>
+   <a class="btn" href="index.html#ubm-courses">Back to Courses</a>
+  </div>
+ </section>
+</main>
+
+<footer><div class="wrap">© 2026 UBM Pakistan • Learn & Earn</div></footer>
+
+<script>
+const common = {
+"digital-marketing": {
+name:"Digital Marketing",
+desc:"Learn SEO, social media marketing, advertising and campaign strategy to help businesses grow online.",
+outcomes:["Digital marketing strategy and audience research","Social media content planning","SEO and keyword research","Paid advertising fundamentals","Analytics and campaign reporting"],
+weeks:[
+["Foundations","Digital marketing channels and customer journeys","Audience research, goals and competitor analysis"],
+["Social Media","Platform selection and profile optimization","Content calendars, captions and engagement"],
+["SEO","Keyword research and search intent","On-page SEO, internal links and analytics"],
+["Paid Advertising","Campaign goals and audience targeting","Creative testing and budget fundamentals"],
+["Analytics","Email marketing and conversion funnels","KPIs, tracking and campaign reporting"],
+["Final Project","Create a 30-day marketing plan","Prepare sample content and a campaign report"]
+],
+project:"Create a 30-day marketing plan with audience research, a content calendar, SEO recommendations and campaign measurement.",
+careers:["Digital Marketing Assistant","Social Media Coordinator","SEO Trainee","Freelance Marketing"]
+},
+"content-writing": {
+name:"Content Writing",
+desc:"Develop your writing skills for blogs, websites, product descriptions and SEO-friendly content.",
+outcomes:["Article and website writing","Topic research and outlining","SEO-friendly writing","Editing and proofreading","Portfolio development"],
+weeks:[
+["Writing Basics","Audience, purpose and tone of voice","Research, outlines and clear sentences"],
+["Blog Writing","Blog structures and introductions","Website pages and product descriptions"],
+["SEO Writing","Keyword research and search intent","Headings, internal links and metadata"],
+["Copywriting","Benefits, features and calls to action","Social captions, email and advertising copy"],
+["Editing","Proofreading and readability","Fact-checking and originality"],
+["Writing Portfolio","Write a researched blog post","Compile website copy and social captions"]
+],
+project:"Create a portfolio containing a researched blog post, an SEO-friendly webpage, a product description and social captions.",
+careers:["Content Writer","Blog Writer","Copywriting Assistant","Freelance Writer"]
+},
+"canva-course": {
+name:"Canva Course",
+desc:"Learn to design attractive social media graphics, presentations, promotional content and brand assets.",
+outcomes:["Canva tools and templates","Typography, spacing and colors","Social media graphics","Brand kit creation","Design exports and portfolio"],
+weeks:[
+["Design Basics","Canva workspace, templates and elements","Alignment, contrast, typography and color"],
+["Social Graphics","Posts, stories and carousel layouts","Designing for social media dimensions"],
+["Branding","Brand kits and logo concepts","Flyers, banners and promotional graphics"],
+["Presentations","Slide design and visual storytelling","Documents, charts and information hierarchy"],
+["Design Workflow","Reusable templates and batch design","Feedback, revisions and export settings"],
+["Design Portfolio","Create a coordinated campaign","Build a mini brand identity pack"]
+],
+project:"Design a mini brand kit and a coordinated social campaign containing posts, stories and a promotional banner.",
+careers:["Canva Designer","Social Media Designer","Creative Assistant","Freelance Designer"]
+},
+"shopify-ecommerce": {
+name:"Shopify E-Commerce",
+desc:"Learn the basics of setting up, organizing and managing a Shopify online store.",
+outcomes:["Product niche research","Store setup and themes","Product pages and collections","Shipping and order workflows","Store marketing and analytics"],
+weeks:[
+["E-Commerce Basics","Niche and customer research","Competitor review and customer journey"],
+["Store Setup","Shopify dashboard, settings and themes","Navigation, policies and trust elements"],
+["Products","Product descriptions and images","Collections, variants, inventory and pricing"],
+["Store Operations","Payment setup concepts","Shipping, fulfillment, orders and refunds"],
+["Store Marketing","SEO for products and collections","Traffic sources and analytics"],
+["Store Project","Build a demo store structure","Prepare product listings and a launch plan"]
+],
+project:"Build a demo storefront structure with collections, sample product pages, store policies and a launch marketing plan.",
+careers:["E-Commerce Assistant","Shopify Store Support","Product Listing Specialist","Store Operator"]
+},
+"amazon-fba": {
+name:"Amazon FBA",
+desc:"Understand Amazon FBA, product research, product listings and fulfillment workflows.",
+outcomes:["Amazon FBA fundamentals","Product research","Supplier and cost considerations","Listing optimization","Inventory and fulfillment basics"],
+weeks:[
+["Seller Foundations","Amazon marketplace and FBA workflow","Seller account concepts, rules and fees"],
+["Product Research","Demand, competition and seasonality","Product evaluation and risk checks"],
+["Sourcing and Costing","Supplier research and communication","Costs, margins, samples and quality checks"],
+["Product Listings","Titles, bullet points and descriptions","Keywords, images and listing policies"],
+["Fulfillment","Inventory planning and shipment workflow","Customer experience and advertising basics"],
+["Launch Plan","Evaluate a sample product opportunity","Draft a listing and launch checklist"]
+],
+project:"Prepare a product research report, estimated cost worksheet, product listing draft and launch-readiness checklist.",
+careers:["Marketplace Assistant","Product Research Assistant","Listing Specialist","E-Commerce Trainee"]
+},
+"ebay-bootcamp": {
+name:"eBay Bootcamp",
+desc:"Learn the fundamentals of eBay selling, product research, listing creation, pricing and shipping.",
+outcomes:["eBay seller tools and policies","Product and competitor research","Accurate product listings","Pricing and shipping","Seller performance basics"],
+weeks:[
+["Foundations","Marketplace overview and seller dashboard","Seller policies and selling models"],
+["Product Research","Demand and competition checks","Sold listings, pricing and sourcing"],
+["Listing Creation","Titles, item specifics and descriptions","Photos, categories and listing quality"],
+["Pricing and Shipping","Fees and profit calculations","Shipping, packaging and order processing"],
+["Customer Service","Buyer messages, returns and issue handling","Seller standards and performance metrics"],
+["Store Plan","Create sample listings and shipping plans","Build a 30-day improvement checklist"]
+],
+project:"Create three sample listings with pricing and shipping plans, plus an operations and customer-service checklist.",
+careers:["eBay Listing Assistant","Marketplace Virtual Assistant","Product Research Assistant","E-Commerce Support"]
+}
+};
+
+const key = new URLSearchParams(window.location.search).get("course");
+const c = common[key];
+if (!c) {
+ document.getElementById("courseTitle").textContent = "Course Not Found";
+ document.getElementById("description").textContent = "Please return to the courses section and choose a course.";
+ document.getElementById("outcomes").innerHTML = "";
+ document.getElementById("weeks").innerHTML = "";
+ document.getElementById("project").textContent = "";
+ document.getElementById("careers").innerHTML = "";
+} else {
+ document.title = c.name + " | UBM Pakistan";
+ document.getElementById("courseTitle").innerHTML =
+   c.name + ' <span>Course</span>';
+ document.getElementById("description").textContent = c.desc;
+ document.getElementById("outcomes").innerHTML =
+   c.outcomes.map(x => '<div class="outcome"><b>✓</b><span>'+x+'</span></div>').join("");
+ document.getElementById("weeks").innerHTML =
+   c.weeks.map((w,i) => '<article class="week"><small>WEEKS '+(i*2+1)+'–'+(i*2+2)+'</small><h3>'+w[0]+'</h3><ul><li>'+w[1]+'</li><li>'+w[2]+'</li></ul></article>').join("");
+ document.getElementById("project").textContent = c.project;
+ document.getElementById("careers").innerHTML =
+   c.careers.map(x => '<span class="chip">'+x+'</span>').join("");
+}
+</script>
+</body>
+</html>
