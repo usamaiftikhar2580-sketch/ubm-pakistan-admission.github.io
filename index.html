@@ -117,69 +117,40 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 #admission .ok{width:70px;height:70px;border-radius:50%;background:#19351d;color:var(--g);display:grid;place-items:center;margin:0 auto 16px;font-size:34px}
 #admission .an{margin-top:16px;color:var(--g);font-size:20px;font-weight:800}@media(max-width:700px){#admission .ag{grid-template-columns:1fr}#admission .full{grid-column:auto}#admission form{padding:20px 16px}}
 <style>
-.hero-photo {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  min-height: 530px;
-  overflow: visible;
-  background: transparent !important;
-  border: none !important;
-  outline: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
-
-.hero-man {
-display: block;
-width: 100%;
-max-width: 460px;
-height: auto;
-max-height: none;
-object-fit: contain;
-object-position: center bottom;
-}
-
-
-@media (max-width: 768px) {
-  .hero-photo {
-    min-height: 300px;
-  }
-
-  .hero-man {
-    max-width: 330px;
-    max-height: 420px;
-  }
-}
-</style>
-
-</style> <style>
-/* Fix hero section clipping */
+/* Hero section: allow full image to show */
 header.hero#home {
   height: auto !important;
   min-height: 0 !important;
   max-height: none !important;
   overflow: visible !important;
+  padding-top: 60px !important;
   padding-bottom: 60px !important;
 }
 
 header.hero#home > .w {
+  display: grid !important;
+  grid-template-columns: 1.1fr 0.9fr !important;
+  align-items: center !important;
+  gap: 30px !important;
   height: auto !important;
   min-height: 0 !important;
   overflow: visible !important;
-  align-items: center !important;
 }
 
 header.hero#home .hero-photo {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  width: 100% !important;
   height: auto !important;
   min-height: 0 !important;
   max-height: none !important;
   overflow: visible !important;
-  align-self: stretch !important;
-  display: flex !important;
-  align-items: flex-end !important;
-  justify-content: center !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 header.hero#home .hero-man {
@@ -194,7 +165,16 @@ header.hero#home .hero-man {
 
 @media (max-width: 768px) {
   header.hero#home {
+    padding-top: 35px !important;
     padding-bottom: 35px !important;
+  }
+
+  header.hero#home > .w {
+    grid-template-columns: 1fr !important;
+  }
+
+  header.hero#home .hero-photo {
+    min-height: 0 !important;
   }
 
   header.hero#home .hero-man {
@@ -202,6 +182,7 @@ header.hero#home .hero-man {
   }
 }
 </style>
+
 </head><link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><body>
 <div class="top"><div class="w"><span>🟢 UBM Pakistan - Learn &amp; Earn</span><span class="top-contact">
