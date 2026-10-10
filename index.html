@@ -495,7 +495,25 @@ alt="Amazon FBA Course"><span class="ubm-duration">3 MONTHS</span></div>
   #ubm-courses .ubm-card:hover { transform: none; }
 }
 ```css
+/* Desktop hero image bottom clipping fix */
+@media (min-width: 769px) {
+  header.hero#home .hero-photo {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    align-items: flex-end !important;
+  }
 
+  header.hero#home .hero-man {
+    display: block !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+    clip-path: none !important;
+    transform: none !important;
+  }
+}
 </style>
 <!-- UBM PAKISTAN COURSES SECTION END -->
 <div class="w"><h2>Our <span>Programs &amp; Services</span></h2><p class="sub">Affordable Learning - Real World Skills</p>
