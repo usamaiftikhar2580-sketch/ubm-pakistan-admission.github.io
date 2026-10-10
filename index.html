@@ -117,20 +117,22 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 #admission .ok{width:70px;height:70px;border-radius:50%;background:#19351d;color:var(--g);display:grid;place-items:center;margin:0 auto 16px;font-size:34px}
 #admission .an{margin-top:16px;color:var(--g);font-size:20px;font-weight:800}@media(max-width:700px){#admission .ag{grid-template-columns:1fr}#admission .full{grid-column:auto}#admission form{padding:20px 16px}}
 <style>
-```css
-/* Hero section: allow full image to show */
+
+<style>
+/* UBM Pakistan - Hero section fix */
+
 header.hero#home {
   height: auto !important;
   min-height: 0 !important;
   max-height: none !important;
   overflow: visible !important;
-  padding-top: 100px !important;
-  padding-bottom: 60px !important;
+  padding: 100px 0 60px !important;
+  box-sizing: border-box !important;
 }
 
 header.hero#home > .w {
   display: grid !important;
-  grid-template-columns: 1.1fr 0.9fr !important;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr) !important;
   align-items: center !important;
   gap: 30px !important;
   height: auto !important;
@@ -140,8 +142,8 @@ header.hero#home > .w {
 
 header.hero#home .hero-photo {
   display: flex !important;
-  align-items: flex-end !important;
   justify-content: center !important;
+  align-items: center !important;
   width: 100% !important;
   height: auto !important;
   min-height: 0 !important;
@@ -149,53 +151,69 @@ header.hero#home .hero-photo {
   overflow: visible !important;
   background: transparent !important;
   border: none !important;
-  outline: none !important;
-  border-radius: 0 !important;
   box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
-```css
 header.hero#home .hero-man {
   display: block !important;
-  width: 50% !important;
-  max-width: 500px !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  object-position: center bottom !important;
-  transform: scale(1.15) !important;
-  position: relative !important;
-top: 20px !important; margin: 0 !important;
-}
-```
-
-  display: block !important;
   width: 100% !important;
-  max-width: 500px !important;
+  max-width: 420px !important;
   height: auto !important;
   max-height: none !important;
   object-fit: contain !important;
-  object-position: center bottom !important;
+  object-position: center !important;
+  transform: none !important;
+  position: static !important;
+  margin: 0 auto !important;
 }
 
-
+/* Mobile layout */
 @media (max-width: 768px) {
   header.hero#home {
-    padding-top: 35px !important;
-    padding-bottom: 35px !important;
+    padding: 35px 0 45px !important;
   }
 
   header.hero#home > .w {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 28px !important;
   }
 
   header.hero#home .hero-photo {
-    min-height: 0 !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
   }
 
   header.hero#home .hero-man {
-    max-width: 330px !important; bhai kuch bhi nahi hora ha please 1 dafa ma bata do ap phir upgrate ka bol do gyy details sy bata do
+    width: 78% !important;
+    max-width: 270px !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    transform: none !important;
+    position: static !important;
+  }
+
+  header.hero#home h1 {
+    font-size: clamp(34px, 9vw, 46px) !important;
+    line-height: 1.12 !important;
+  }
+
+  header.hero#home p {
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  header.hero#home .hero-man {
+    width: 85% !important;
+    max-width: 250px !important;
+  }
+}
 </style>
+
 </head><link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><body>
 <div class="top"><div class="w"><span>🟢 UBM Pakistan - Learn &amp; Earn</span><span class="top-contact">
@@ -238,13 +256,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <h1>Master Digital Skills with <span>UBM Pakistan</span></h1>
 <p>Practical training, real-world projects and lifetime support. Learn skills that help you build a career or business online.</p>
 <a class="btn" href="https://wa.me/923040880992?text=Hi%20UBM%20Pakistan%2C%20I%20want%20to%20book%20an%20appointment.">Book Appointment</a><a class="btn o" href="#courses">Explore Courses</a><a class="btn o" href="tel:+923040880992">📞 +923040880992</a></div>
+
 <div class="hero-photo">
- <div class="hero-photo">
-  <img src="Confident%20South%20Asian%20Man%20in%20Black%20Suit.png"
-       alt="UBM Pakistan Professional"
-       class="hero-man">
-</div> 
-</div></div></header>
+  <img
+    src="Confident%20South%20Asian%20Man%20in%20Black%20Suit.png"
+    alt="UBM Pakistan Professional"
+    class="hero-man">
+</div>
+</div></header>
 
 <section class="alt" style="padding:40px 0"><div class="w stats">
 <div class="stat"><b data-n="6">6</b><small>Professional Courses</small></div><div class="stat"><b>Practical</b><small>Hands-on Training</small></div>
