@@ -227,8 +227,93 @@ header.hero#home .hero-man {
   }
 }
 
-
 </style>
+
+<style>
+/* UBM Pakistan — Founder Signature */
+header.hero#home .hero-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+header.hero#home .founder-signature {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 360px);
+  padding: 17px 20px;
+  text-align: center;
+  box-sizing: border-box;
+  background: linear-gradient(
+    135deg,
+    rgba(12, 25, 19, 0.96),
+    rgba(18, 38, 27, 0.92)
+  );
+  border: 1px solid rgba(107, 220, 91, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.22);
+  animation: founderFadeIn 0.8s ease both;
+}
+
+header.hero#home .founder-line {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin: 0 auto 11px;
+  border-radius: 10px;
+  background: #6bdc5b;
+  box-shadow: 0 0 14px rgba(107, 220, 91, 0.65);
+}
+
+header.hero#home .founder-name {
+  color: #ffffff;
+  font-size: clamp(22px, 3vw, 28px);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+header.hero#home .founder-role {
+  margin-top: 8px;
+  color: #9fe891;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.7;
+}
+
+@keyframes founderFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  header.hero#home .founder-signature {
+    width: min(92%, 320px);
+    padding: 15px 14px;
+  }
+
+  header.hero#home .founder-role {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header.hero#home .founder-signature {
+    animation: none;
+  }
+}
+</style>
+
 </head><link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><body>
 <div class="top"><div class="w"><span>🟢 UBM Pakistan - Learn &amp; Earn</span><span class="top-contact">
