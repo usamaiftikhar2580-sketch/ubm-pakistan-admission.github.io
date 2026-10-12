@@ -326,7 +326,46 @@ header.hero#home .founder-role {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+/* Professional hover transition for Why Choose cards */
+#why .two > div {
+  position: relative;
+  border: 1px solid rgba(112, 223, 66, 0.16);
+  border-radius: 18px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+}
 
+#why .two > div:hover {
+  transform: translateY(-7px);
+  border-color: rgba(112, 223, 66, 0.65);
+  box-shadow: 0 12px 30px rgba(112, 223, 66, 0.12);
+  background: rgba(112, 223, 66, 0.045);
+}
+
+#why .two > div .why-icon {
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+#why .two > div:hover .why-icon {
+  transform: scale(1.08);
+  box-shadow: 0 8px 22px rgba(112, 223, 66, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #why .two > div,
+  #why .two > div .why-icon {
+    transition: none;
+  }
+
+  #why .two > div:hover {
+    transform: none;
+  }
+}
 </style>
 
 <style>
