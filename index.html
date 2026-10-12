@@ -326,18 +326,7 @@ header.hero#home .founder-role {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-/* Professional hover transition for Why Choose cards */
-#why .two > div {
-  position: relative;
-  border: 1px solid rgba(112, 223, 66, 0.16);
-  border-radius: 18px;
-  padding: 24px;
-  background: rgba(255, 255, 255, 0.02);
-  transition: transform 0.3s ease,
-              border-color 0.3s ease,
-              box-shadow 0.3s ease,
-              background 0.3s ease;
-}
+/* 
 
 #why .two > div:hover {
   transform: translateY(-7px);
@@ -363,6 +352,42 @@ header.hero#home .founder-role {
   }
 
   #why .two > div:hover {
+    transform: none;
+  }
+}
+  UBM Pakistan - Why Choose hover effect */
+#why .two > div,
+#why .two > article,
+#why .why-card,
+#why .feature-card {
+  box-sizing: border-box;
+  transition: transform 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              background-color 0.3s ease;
+}
+
+#why .two > div:hover,
+#why .two > article:hover,
+#why .why-card:hover,
+#why .feature-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(112, 223, 66, 0.75);
+  box-shadow: 0 12px 28px rgba(112, 223, 66, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #why .two > div,
+  #why .two > article,
+  #why .why-card,
+  #why .feature-card {
+    transition: none;
+  }
+
+  #why .two > div:hover,
+  #why .two > article:hover,
+  #why .why-card:hover,
+  #why .feature-card:hover {
     transform: none;
   }
 }
@@ -401,7 +426,7 @@ header.hero#home .founder-role {
   stroke-linejoin: round;
 }
 
-#why .two > div:hover .why-icon {
+#why .feat .f:hover .why-icon {
   transform: translateY(-4px);
   background: rgba(112, 223, 66, 0.18);
   border-color: #70df42;
@@ -410,6 +435,44 @@ header.hero#home .founder-role {
 @media (prefers-reduced-motion: reduce) {
   #why .why-icon {
     transition: none;
+  }
+}
+/* UBM Pakistan - Why Choose card hover effect */
+#why .feat .f {
+  box-sizing: border-box;
+  border: 1px solid rgba(112, 223, 66, 0.18);
+  border-radius: 18px;
+  transition: transform 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              background-color 0.3s ease;
+}
+
+#why .feat .f:hover {
+  transform: translateY(-7px);
+  border-color: rgba(112, 223, 66, 0.8);
+  box-shadow: 0 12px 28px rgba(112, 223, 66, 0.16);
+  background-color: rgba(112, 223, 66, 0.04);
+}
+
+#why .feat .f .why-icon {
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+#why .feat .f:hover .why-icon {
+  transform: scale(1.08);
+  box-shadow: 0 8px 22px rgba(112, 223, 66, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #why .feat .f,
+  #why .feat .f .why-icon {
+    transition: none;
+  }
+
+  #why .feat .f:hover {
+    transform: none;
   }
 }
 </style>
