@@ -567,7 +567,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <button id="bg" aria-label="Menu">☰</button>
 <div class="menu" id="mn"><a href="#home">Home</a><a href="#about">About</a><a href="#courses">Courses</a><a href="#services">Services</a><a href="#admission">Admission</a><a href="#announcements">Announcements</a><a href="#contact">Contact Us</a><a class="btn" href="https://wa.me/923040880992">Enroll Now</a></div></div></nav>
 
-<header class="hero" id="home"><div class="w"><div>
+<header class="hero" id="home"><div class="w"><div class="hero-text">
 <span class="pill">Pakistan's Skills &amp; E-Commerce Training</span>
 <h1>Master Digital Skills with <span>UBM Pakistan</span></h1>
 <p>Practical training, real-world projects and lifetime support. Learn skills that help you build a career or business online.</p>
@@ -677,7 +677,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     </div>
   </div>
 </section>
-
+/* Move only hero text slightly upward */
+header.hero#home .hero-text {
+  transform: translateY(-15px);
+}
 <style>
 #ubm-courses {
   padding: 76px 20px;
