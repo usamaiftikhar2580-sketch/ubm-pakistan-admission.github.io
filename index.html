@@ -228,6 +228,47 @@ header.hero#home .hero-man {
 
 </style>
 
+/* UBM ANNOUNCEMENTS — SHOW COMPLETE POSTERS */
+#ubm-announcements .ubm-ann-wrap {
+  width: 94% !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+}
+
+#ubm-announcements .ubm-ann-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  align-items: start !important;
+}
+
+#ubm-announcements .ubm-ann-card {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+#ubm-announcements img.ubm-ann-image {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #ubm-announcements .ubm-ann-wrap {
+    width: 92% !important;
+  }
+
+  #ubm-announcements .ubm-ann-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 25px !important;
+  }
+}
+
 <style>
 /* UBM Pakistan — Founder Signature */
 header.hero#home .hero-photo {
