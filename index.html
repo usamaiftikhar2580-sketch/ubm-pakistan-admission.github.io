@@ -585,9 +585,36 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   </div>
 </div></header>
 
-<section class="alt" style="padding:40px 0"><div class="w stats">
-<div class="stat"><b data-n="6">6</b><small>Professional Courses</small></div><div class="stat"><b>Practical</b><small>Hands-on Training</small></div>
-<div class="stat"><b>Lifetime</b><small>Student Support</small></div><div class="stat"><b>Learn &amp; Earn</b><small>Real-World Results</small></div></div></section>
+
+<!-- UBM PAKISTAN STATS SECTION START -->
+<section id="ubm-stats" class="alt">
+  <div class="w stats">
+
+    <div class="stat">
+      <b class="ubm-counter" data-target="6"
+         data-suffix="">0</b>
+      <small>Professional Courses</small>
+    </div>
+
+    <div class="stat">
+      <b>Practical</b>
+      <small>Hands-on Training</small>
+    </div>
+
+    <div class="stat">
+      <b>Lifetime</b>
+      <small>Student Support</small>
+    </div>
+
+    <div class="stat">
+      <b>Learn &amp; Earn</b>
+      <small>Real-World Results</small>
+    </div>
+
+  </div>
+</section>
+<!-- UBM PAKISTAN STATS SECTION END -->
+
 
 <!-- UBM PAKISTAN COURSES SECTION START -->
 <section id="ubm-courses">
@@ -664,28 +691,7 @@ alt="Amazon FBA Course"><span class="ubm-duration">3 MONTHS</span></div>
   </div>
 </section>
 
-
-<style>
-#ubm-courses {
-  padding: 75px 0;
-  background: #080d0f;
-  color: #fff;
-  font-family: Arial, sans-serif;
-}
-#ubm-courses * { box-sizing: border-box; }
-#ubm-courses .ubm-wrap {
-  width: min(1120px, 92%);
-  margin: auto;
-}
-#ubm-courses .ubm-heading {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 38px;
-}
-#ubm-courses .ubm-label {
-  color: #70df42;
-  font-size: 12px;
-  font-weight: bold;
+c
   letter-spacing: 2px;
 }
 #ubm-courses .ubm-heading h2 {
@@ -2123,4 +2129,62 @@ $("#ma").onclick=function(){$("#md").classList.remove("on")};
     text-align: center;
   }
 }
-</style></body></html>
+</style>
+<script>
+(() => {
+  const section = document.querySelector("#ubm-stats");
+  if (!section || section.dataset.counterReady) return;
+
+  section.dataset.counterReady = "true";
+
+  const counters = section.querySelectorAll(".ubm-counter");
+  let started = false;
+
+  function startCounters() {
+    if (started) return;
+    started = true;
+
+    counters.forEach((counter) => {
+      const target = Number(counter.dataset.target);
+      const suffix = counter.dataset.suffix || "";
+      const duration = 1400;
+      const startTime = performance.now();
+
+      function update(now) {
+        const progress = Math.min(
+          (now - startTime) / duration, 1
+        );
+
+        // Smooth ease-out: fast at first, then slows down
+        const eased = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(eased * target);
+
+        counter.textContent = current.toLocaleString() + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target.toLocaleString() + suffix;
+        }
+      }
+
+      requestAnimationFrame(update);
+    });
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        startCounters();
+        observer.disconnect();
+      }
+    }, { threshold: 0.25 });
+
+    observer.observe(section);
+  } else {
+    startCounters();
+  }
+})();
+</script>
+</body>
+</body></html>
