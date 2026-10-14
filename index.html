@@ -609,9 +609,32 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   </div>
 </div></header>
 
-<section class="alt" style="padding:40px 0"><div class="w stats">
-<div class="stat"><b data-n="6">6</b><small>Professional Courses</small></div><div class="stat"><b>Practical</b><small>Hands-on Training</small></div>
-<div class="stat"><b>Lifetime</b><small>Student Support</small></div><div class="stat"><b>Learn &amp; Earn</b><small>Real-World Results</small></div></div></section>
+<!-- UBM PAKISTAN — WHITE STATS SECTION -->
+<section id="ubm-stats">
+  <div class="ubm-stats-wrap">
+
+    <div class="ubm-stat-card">
+      <b>6</b>
+      <small>Professional Courses</small>
+    </div>
+
+    <div class="ubm-stat-card">
+      <b>Practical</b>
+      <small>Hands-on Training</small>
+    </div>
+
+    <div class="ubm-stat-card">
+      <b>Lifetime</b>
+      <small>Student Support</small>
+    </div>
+
+    <div class="ubm-stat-card">
+      <b>Learn &amp; Earn</b>
+      <small>Real-World Results</small>
+    </div>
+
+  </div>
+</section>
 
 
 <!-- UBM PAKISTAN COURSES SECTION START -->
@@ -889,6 +912,80 @@ header.hero#home .hero-text {
 
   #ubm-courses .ubm-card:hover,
   #ubm-courses .ubm-card:hover .ubm-course-image {
+    transform: none;
+  }
+}
+/* UBM PAKISTAN — WHITE STATS DESIGN */
+#ubm-stats {
+  background: #ffffff;
+  padding: 35px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#ubm-stats .ubm-stats-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+#ubm-stats .ubm-stat-card {
+  background: #ffffff;
+  border: 1px solid #e7eee4;
+  border-radius: 16px;
+  padding: 27px 14px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+
+#ubm-stats .ubm-stat-card:hover {
+  transform: translateY(-6px);
+  border-color: #70df42;
+  box-shadow: 0 12px 25px rgba(40, 120, 30, 0.12);
+}
+
+#ubm-stats .ubm-stat-card b {
+  display: block;
+  color: #173d25;
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 9px;
+}
+
+#ubm-stats .ubm-stat-card small {
+  display: block;
+  color: #626b63;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  #ubm-stats .ubm-stats-wrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  #ubm-stats .ubm-stat-card {
+    padding: 22px 10px;
+  }
+
+  #ubm-stats .ubm-stat-card b {
+    font-size: 21px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #ubm-stats .ubm-stat-card {
+    transition: none;
+  }
+
+  #ubm-stats .ubm-stat-card:hover {
     transform: none;
   }
 }
