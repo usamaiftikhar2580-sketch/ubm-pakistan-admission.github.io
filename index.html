@@ -936,9 +936,240 @@ alt="Amazon FBA Course"><span class="ubm-duration">3 MONTHS</span></div>
 <p>Our mission is simple: <b style="color:var(--g)">Learn &amp; Earn</b>. We teach practical skills so you can start freelancing, launch your own online store or grow your business.</p>
 <a class="btn" href="https://wa.me/923040880992">Talk to Us</a></div></div></section>
 
-<section class="alt" id="announcements"><div class="w"><h2>Latest <span>Announcements</span></h2><p class="sub">Stay updated with the latest news, upcoming courses and special offers from UBM Pakistan.</p>
-<div class="two"><div class="card"><div class="ic">📢</div><h3>New Batches &amp; Offers</h3><p>Contact us for the latest batch dates, fee details and special offers on all six courses.</p><a class="btn" href="https://wa.me/923040880992">View Details</a></div>
-<div class="card"><div class="ic">📞</div><h3>Free Counselling</h3><p>Not sure which course suits you? Talk to our team and get guidance on the right skill for your goals.</p><a class="btn o" href="tel:+923040880992">Call +923040880992</a></div></div></div></section>
+
+<style>
+/* UBM Pakistan Announcements */
+#ubm-announcements {
+  background: #080f0c;
+  color: #ffffff;
+  padding: 70px 20px;
+}
+
+#ubm-announcements .ubm-ann-wrap {
+  max-width: 1150px;
+  margin: auto;
+}
+
+#ubm-announcements .ubm-ann-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+#ubm-announcements .ubm-ann-heading h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0 0 12px;
+}
+
+#ubm-announcements .ubm-ann-heading h2 span {
+  color: #70df42;
+}
+
+#ubm-announcements .ubm-ann-heading p {
+  color: #bdc8c1;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: auto;
+}
+
+#ubm-announcements .ubm-ann-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+#ubm-announcements .ubm-ann-card {
+  background: #111b16;
+  border: 1px solid #293d30;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s ease, border-color .3s ease,
+              box-shadow .3s ease;
+}
+
+#ubm-announcements .ubm-ann-card:hover {
+  transform: translateY(-7px);
+  border-color: #70df42;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .25);
+}
+
+#ubm-announcements .ubm-ann-image {
+  width: 100%;
+  height: 205px;
+  object-fit: cover;
+  display: block;
+}
+
+#ubm-announcements .ubm-ann-content {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#ubm-announcements .ubm-ann-date {
+  color: #70df42;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+#ubm-announcements .ubm-ann-content h3 {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+
+#ubm-announcements .ubm-ann-content p {
+  color: #c0cbc4;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 22px;
+}
+
+#ubm-announcements .ubm-ann-btn {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 11px 17px;
+  border-radius: 7px;
+  background: #70df42;
+  color: #071007;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  transition: background .2s ease;
+}
+
+#ubm-announcements .ubm-ann-btn:hover {
+  background: #92f46b;
+}
+
+@media (max-width: 850px) {
+  #ubm-announcements .ubm-ann-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  #ubm-announcements {
+    padding: 50px 15px;
+  }
+
+  #ubm-announcements .ubm-ann-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #ubm-announcements .ubm-ann-image {
+    height: 220px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #ubm-announcements .ubm-ann-card {
+    transition: none;
+  }
+
+  #ubm-announcements .ubm-ann-card:hover {
+    transform: none;
+  }
+}
+</style>
+
+<section id="ubm-announcements">
+  <div class="ubm-ann-wrap">
+
+    <div class="ubm-ann-heading">
+      <h2>Latest <span>Announcements</span></h2>
+      <p>
+        Stay updated with the latest news, upcoming courses
+        and special offers from UBM Pakistan.
+      </p>
+    </div>
+
+    <div class="ubm-ann-grid">
+
+      <!-- Announcement 1 -->
+      <article class="ubm-ann-card">
+        <img
+          class="ubm-ann-image"
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+          alt="Students learning together"
+          loading="lazy"
+        >
+
+        <div class="ubm-ann-content">
+          <div class="ubm-ann-date">UBM PAKISTAN • COURSES</div>
+          <h3>New Batches &amp; Special Offers</h3>
+          <p>
+            Learn practical eBay, Etsy, digital marketing and
+            other online business skills. Contact our team for
+            upcoming batch dates and current fee offers.
+          </p>
+          <a
+            class="ubm-ann-btn"
+            href="https://wa.me/923040880992?text=Assalamualaikum%2C%20I%20want%20to%20know%20about%20new%20batches%20and%20course%20fees."
+            target="_blank"
+            rel="noopener"
+          >View Details →</a>
+        </div>
+      </article>
+
+      <!-- Announcement 2 -->
+      <article class="ubm-ann-card">
+        <img
+          class="ubm-ann-image"
+          src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80"
+          alt="Team providing professional guidance"
+          loading="lazy"
+        >
+
+        <div class="ubm-ann-content">
+          <div class="ubm-ann-date">UBM PAKISTAN • GUIDANCE</div>
+          <h3>Free Counselling</h3>
+          <p>
+            Not sure which course is right for you? Contact our
+            team to discuss your goals and get guidance on
+            choosing a suitable learning program.
+          </p>
+          <a
+            class="ubm-ann-btn"
+            href="tel:+923040880992"
+          >Call Our Team →</a>
+        </div>
+      </article>
+
+      <!-- Announcement 3 -->
+      <article class="ubm-ann-card">
+        <img
+          class="ubm-ann-image"
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+          alt="Digital learning and online work"
+          loading="lazy"
+        >
+
+        <div class="ubm-ann-content">
+          <div class="ubm-ann-date">UBM PAKISTAN • LEARN &amp; GROW</div>
+          <h3>Build Your Digital Skills</h3>
+          <p>
+            Explore our practical training programs and learn
+            skills for online business, freelancing and digital
+            opportunities. Contact us to learn more.
+          </p>
+          <a
+            class="ubm-ann-btn"
+            href="https://wa.me/923040880992?text=Assalamualaikum%2C%20please%20share%20details%20about%20UBM%20Pakistan%20courses."
+            target="_blank"
+            rel="noopener"
+          >Explore Courses →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 <section id="admission" style="background:#10161a"><div class="w"><h2>eBay Training Program <span>Admission</span></h2><p class="sub">Admissions open. Fill the form below to apply online.</p>
 <div class="fb"><div class="fh"><h3>Admission Form</h3><p>Special fee: <s>Rs. 25,000</s> <b style="color:var(--g)">Rs. 20,000</b> (Save Rs. 5,000). Please provide accurate information.</p></div>
 <div id="status" class="status"></div><form id="admissionForm"><div class="sec"><div class="st"><div class="num">1</div><h4>Student Information</h4></div><div class="ag"><div class="field"><label>Full Name <span>*</span></label><input type="text" name="fullName" placeholder="" required></div><div class="field"><label>Father / Guardian Name <span>*</span></label><input type="text" name="guardianName" placeholder="" required></div><div class="field"><label>Date of Birth <span>*</span></label><input type="date" name="dob" placeholder="" required></div><div class="field"><label>Gender <span>*</span></label><select name="gender" required><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option></select></div><div class="field"><label>CNIC / B-Form Number</label><input type="text" name="cnic" placeholder="Optional"></div></div></div><div class="sec"><div class="st"><div class="num">2</div><h4>Contact Information</h4></div><div class="ag"><div class="field"><label>WhatsApp Number <span>*</span></label><input type="tel" name="whatsapp" placeholder="03XX XXXXXXX" required></div><div class="field"><label>Alternate Contact Number</label><input type="tel" name="alternatePhone" placeholder=""></div><div class="field"><label>Email Address <span>*</span></label><input type="email" name="email" placeholder="" required></div><div class="field"><label>City <span>*</span></label><input type="text" name="city" placeholder="" required></div><div class="field full"><label>Complete Address <span>*</span></label><textarea name="address" required></textarea></div></div></div><div class="sec"><div class="st"><div class="num">3</div><h4>Education &amp; Background</h4></div><div class="ag"><div class="field"><label>Highest Qualification <span>*</span></label><select name="qualification" required><option value="">Select</option><option>Matric</option><option>Intermediate</option><option>Graduation</option><option>Master's</option><option>Other</option></select></div><div class="field"><label>Current Status <span>*</span></label><select name="status" required><option value="">Select</option><option>Student</option><option>Job</option><option>Business</option><option>Freelancer</option><option>Unemployed</option><option>Other</option></select></div></div></div><div class="sec"><div class="st"><div class="num">4</div><h4>eBay Experience</h4></div><div class="ag"><div class="field full"><label>Previous eBay experience? <span>*</span></label><div class="opts"><label class="opt"><input type="radio" name="ebayExperience" value="Yes" required> Yes</label><label class="opt"><input type="radio" name="ebayExperience" value="No"> No</label></div></div><div class="field full"><label>Currently have an eBay account? <span>*</span></label><div class="opts"><label class="opt"><input type="radio" name="ebayAccount" value="Yes" required> Yes</label><label class="opt"><input type="radio" name="ebayAccount" value="No"> No</label></div></div><div class="field full"><label>Why do you want to learn eBay? <span>*</span></label><textarea name="reason" required></textarea></div><div class="field full"><label>What do you want to achieve after the course? <span>*</span></label><textarea name="goal" required></textarea></div></div></div><div class="sec"><div class="st"><div class="num">5</div><h4>Course &amp; Batch</h4></div><div class="ag"><div class="field"><label>Course</label><input value="eBay Training Program" readonly></div><div class="field"><label>Select Batch <span>*</span></label><select name="batch" required><option value="">Select</option><option>Batch 1</option><option>Batch 2</option><option>Upcoming Batch</option></select></div><div class="field full"><label>How did you hear about UBM Pakistan? <span>*</span></label><select name="source" required><option value="">Select</option><option>Facebook</option><option>Instagram</option><option>TikTok</option><option>WhatsApp</option><option>YouTube</option><option>Friend / Relative</option><option>Other</option></select></div></div></div><div class="sec"><div class="st"><div class="num">6</div><h4>Course Fee</h4></div><div class="feebox"><div class="fr"><span>Regular Course Fee</span><b>Rs. 25,000</b></div><div class="fr"><span>Admission Discount</span><b>Rs. 5,000</b></div><div class="fr tot"><span>Special Admission Fee</span><span>Rs. 20,000</span></div></div><label class="chk"><input type="checkbox" name="feeConfirmation" required> I understand that the special admission fee is Rs. 20,000.</label></div><div class="sec"><div class="st"><div class="num">7</div><h4>Guardian / Emergency Contact</h4></div><div class="ag"><div class="field"><label>Contact Name <span>*</span></label><input type="text" name="emergencyName" placeholder="" required></div><div class="field"><label>Relationship <span>*</span></label><input type="text" name="relationship" placeholder="" required></div><div class="field"><label>Contact Number <span>*</span></label><input type="text" name="emergencyPhone" placeholder="" required></div></div></div><div class="sec"><div class="st"><div class="num">8</div><h4>Declaration</h4></div><div class="decl"><p>I confirm that the information provided by me is correct. I understand the course fee and admission terms of the UBM Pakistan eBay Training Program.</p><label class="chk"><input type="checkbox" name="declaration" required> I agree to the above declaration.</label></div></div><div style="text-align:center"><button class="btn" id="submitBtn" type="submit">Submit Admission Application</button><p class="nt">Your application will be securely sent to UBM Pakistan.</p></div></form>
