@@ -439,12 +439,20 @@ header.hero#home .founder-role {
   }
 }
 
+
 /* UBM Pakistan — Founder signature position */
 header.hero#home .hero-photo .founder-signature {
   position: relative !important;
-  left: 100px !important;
-  transform: translateX(0) !important;
+  left: -15px !important;
+  transform: none !important;
 }
+
+@media (max-width: 768px) {
+  header.hero#home .hero-photo .founder-signature {
+    left: 0 !important;
+  }
+}
+
 
 @media (max-width: 768px) {
   header.hero#home .hero-photo .founder-signature {
