@@ -2592,15 +2592,18 @@ $("#ma").onclick=function(){$("#md").classList.remove("on")};
   }
 }
 
+
 /* UBM Pakistan: move hero text upward */
-header.hero#home .hero-text {
-  transform: translateY(-25px) !important;
+header.hero#home > .w > div:first-child {
+  position: relative !important;
+  top: -40px !important;
 }
 
 @media (max-width: 760px) {
-  header.hero#home .hero-text {
-    transform: translateY(-12px) !important;
+  header.hero#home > .w > div:first-child {
+    top: -20px !important;
   }
 }
+
 
 </style></body></html>
