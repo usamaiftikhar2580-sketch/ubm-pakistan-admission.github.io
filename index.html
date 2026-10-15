@@ -801,16 +801,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         through practical training and expert guidance.
       </p>
 
-      <div class="hero-buttons">
-        <a class="btn"
-           href="https://wa.me/923040880992?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20join%20UBM%20Pakistan">
-          Enroll Now
-        </a>
+     <div class="hero-actions">
+  <div class="hero-buttons">
+    <a class="btn"
+       href="https://wa.me/923040880992?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20join%20UBM%20Pakistan">
+      Enroll Now
+    </a>
 
-        <a class="btn o" href="#courses">
-          Explore Courses
-        </a>
-      </div>
+    <a class="btn o" href="#courses">
+      Explore Courses
+    </a>
+  </div>
+
+  <p class="hero-phone">
+    <i class="fa-solid fa-phone"></i>
+    <a href="tel:+923040880992">+92 304 0880992</a>
+  </p>
+</div>
 
       <p class="hero-phone">
         <i class="fa-solid fa-phone"></i>
@@ -1230,6 +1237,51 @@ header.hero#home .hero-text {
 
   #ubm-stats .ubm-stat-card:hover {
     transform: none;
+  }
+}
+header.hero#home .hero-text {
+  transform: translateY(-15px) !important;
+}
+
+header.hero#home .hero-actions {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 12px 18px !important;
+}
+
+header.hero#home .hero-actions .hero-buttons {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin: 0 !important;
+}
+
+header.hero#home .hero-actions .hero-buttons .btn {
+  margin: 0 !important;
+}
+
+header.hero#home .hero-actions .hero-phone {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 768px) {
+  header.hero#home .hero-text {
+    transform: translateY(-8px) !important;
+  }
+
+  header.hero#home .hero-actions {
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  header.hero#home .hero-actions .hero-phone {
+    white-space: normal !important;
   }
 }
 </style>
