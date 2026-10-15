@@ -552,6 +552,181 @@ header.hero#home > .w > div:first-child {
 }
 </style>
 
+<style>
+/* UBM Pakistan - Professional Hero Design */
+
+header.hero#home {
+  padding: 65px 0 !important;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(107, 220, 91, 0.15),
+      transparent 45%
+    ),
+    #0d1114;
+}
+
+header.hero#home > .w {
+  display: grid !important;
+  grid-template-columns: 1.1fr 0.9fr !important;
+  align-items: center !important;
+  gap: 45px !important;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header.hero#home .hero-text {
+  min-width: 0;
+}
+
+header.hero#home h1 {
+  font-size: clamp(36px, 4.5vw, 60px);
+  line-height: 1.12;
+  margin: 18px 0;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+header.hero#home h1 span {
+  display: block;
+  color: #6bdc5b;
+}
+
+header.hero#home .hero-text > p {
+  color: #b5c0b8;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+header.hero#home .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+header.hero#home .hero-buttons .btn {
+  margin: 0;
+}
+
+header.hero#home .hero-phone {
+  color: #6bdc5b;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+header.hero#home .hero-phone a {
+  color: #6bdc5b;
+  text-decoration: none;
+}
+
+header.hero#home .hero-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+header.hero#home .hero-man {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  filter: drop-shadow(0 15px 35px rgba(107, 220, 91, 0.12));
+}
+
+header.hero#home .founder-signature {
+  position: static !important;
+  width: min(100%, 360px);
+  padding: 18px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #101e16, #17291d);
+  border: 1px solid rgba(107, 220, 91, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+header.hero#home .founder-line {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  background: #6bdc5b;
+}
+
+header.hero#home .founder-name {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+header.hero#home .founder-role {
+  margin-top: 6px;
+  color: #9fe891;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* TABLET AND MOBILE */
+@media (max-width: 860px) {
+  header.hero#home {
+    padding: 42px 0 !important;
+  }
+
+  header.hero#home > .w {
+    grid-template-columns: 1fr !important;
+    gap: 35px !important;
+  }
+
+  header.hero#home .hero-text {
+    text-align: center;
+  }
+
+  header.hero#home .hero-buttons {
+    justify-content: center;
+  }
+
+  header.hero#home .hero-man {
+    max-width: 330px;
+  }
+
+  header.hero#home .hero-phone {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header.hero#home h1 {
+    font-size: 36px;
+  }
+
+  header.hero#home .hero-text > p {
+    font-size: 16px;
+  }
+
+  header.hero#home .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header.hero#home .hero-buttons .btn {
+    justify-content: center;
+  }
+
+  header.hero#home .hero-man {
+    max-width: 280px;
+  }
+}
+</style>
+
 </head><link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><body>
 <div class="top"><div class="w"><span>🟢 UBM Pakistan - Learn &amp; Earn</span><span class="top-contact">
@@ -589,24 +764,68 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <button id="bg" aria-label="Menu">☰</button>
 <div class="menu" id="mn"><a href="#home">Home</a><a href="#about">About</a><a href="#courses">Courses</a><a href="#services">Services</a><a href="#admission">Admission</a><a href="#announcements">Announcements</a><a href="#contact">Contact Us</a><a class="btn" href="https://wa.me/923040880992">Enroll Now</a></div></div></nav>
 
-<header class="hero" id="home"><div class="w"><div class="hero-text">
-<span class="pill">Pakistan's Skills &amp; E-Commerce Training</span>
-<h1>Master Digital Skills with <span>UBM Pakistan</span></h1>
-<p>Practical training, real-world projects and lifetime support. Learn skills that help you build a career or business online.</p>
-<a class="btn" href="https://wa.me/923040880992?text=Hi%20UBM%20Pakistan%2C%20I%20want%20to%20book%20an%20appointment.">Book Appointment</a><a class="btn o" href="#courses">Explore Courses</a><a class="btn o" href="tel:+923040880992">📞 +923040880992</a></div>
+```html
+<header class="hero" id="home">
+  <div class="w">
 
-<div class="hero-photo">
-  <img
-    src="Confident%20South%20Asian%20Man%20in%20Black%20Suit.png"
-    alt="UBM Pakistan Professional"
-    class="hero-man">
-    <div class="founder-signature">
-    <span class="founder-line"></span>
-    <div class="founder-name">Usman Iftikhar</div>
-    <div class="founder-role">FOUNDER &amp; DIGITAL SKILLS MENTOR</div>
+    <!-- LEFT SIDE: TEXT -->
+    <div class="hero-text">
+
+      <span class="pill">
+        Pakistan's Skills & E-Commerce Training
+      </span>
+
+      <h1>
+        Learn Digital Skills.
+        <span>Build Your Future.</span>
+      </h1>
+
+      <p>
+        Welcome to UBM Pakistan! Learn eBay, Amazon FBA,
+        Shopify, Digital Marketing, Canva and Content Writing
+        through practical training and expert guidance.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn"
+           href="https://wa.me/923040880992?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20join%20UBM%20Pakistan">
+          Enroll Now
+        </a>
+
+        <a class="btn o" href="#courses">
+          Explore Courses
+        </a>
+      </div>
+
+      <p class="hero-phone">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+923040880992">+92 304 0880992</a>
+      </p>
+
+    </div>
+
+    <!-- RIGHT SIDE: YOUR EXISTING PICTURE -->
+    <div class="hero-photo">
+
+      <img
+        src="Confident%20South%20Asian%20Man%20in%20Black%20Suit.png"
+        alt="Usman Iftikhar - CEO of UBM Pakistan"
+        class="hero-man"
+      >
+
+      <div class="founder-signature">
+        <span class="founder-line"></span>
+        <div class="founder-name">Usman Iftikhar</div>
+        <div class="founder-role">
+          FOUNDER & DIGITAL SKILLS MENTOR
+        </div>
+      </div>
+
+    </div>
+
   </div>
-</div></header>
-
+</header>
+```
 <!-- UBM PAKISTAN — WHITE STATS SECTION -->
 <section id="ubm-stats">
   <div class="ubm-stats-wrap">
