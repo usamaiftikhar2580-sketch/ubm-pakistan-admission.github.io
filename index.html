@@ -138,8 +138,6 @@ header.hero#home > .w {
   overflow: visible !important;
 }
 
-<style>
-}
 header.hero#home .hero-photo {
   display: flex !important;
   justify-content: center !important;
@@ -169,7 +167,7 @@ header.hero#home .hero-man {
 }
 
 
-
+  @media (max-width: 768px) {
   header.hero#home > .w {
     grid-template-columns: minmax(0, 1fr) !important;
     gap: 28px !important;
@@ -212,16 +210,17 @@ header.hero#home .hero-man {
 
 
 
+/* UBM Pakistan — Desktop Founder Image Zoom */
+@media (min-width: 769px) {
   header.hero#home .hero-man {
-    display: block !important;
+    width: 100% !important;
+    max-width: 480px !important;
     height: auto !important;
-    max-height: none !important;
-    object-fit: contain !important;
-    object-position: center bottom !important;
-    clip-path: none !important;
-    transform: none !important;
+    transform: scale(1.12) !important;
+    transform-origin: center center !important;
   }
 }
+
 
 
 /* UBM ANNOUNCEMENTS — SHOW COMPLETE POSTERS */
@@ -252,7 +251,12 @@ header.hero#home .hero-man {
   object-fit: contain !important;
   object-position: center center !important;
 }
-/* Mobile layout */ @media (max-width: 768px) { header.hero#home { padding: 35px 0 45px !important; }
+/* Mobile layout */
+@media (max-width: 768px) {
+  header.hero#home {
+    padding: 35px 0 45px !important;
+  }
+}
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -266,17 +270,9 @@ header.hero#home .hero-man {
   }
 }
 
-<style>
 
-/* UBM Pakistan — Laptop picture zoom only */
-@media (min-width: 861px) {
-  header.hero#home .hero-man {
-    width: 125% !important;
-    max-width: 560px !important;
-    transform: scale(1.12) !important;
-    transform-origin: center center !important;
-  }
-}
+
+
 
 /* UBM Pakistan — Founder Signature */
 header.hero#home .hero-photo {
