@@ -137,8 +137,13 @@ header.hero#home > .w {
   min-height: 0 !important;
   overflow: visible !important;
 }
-<style>
 
+/* Mobile layout */
+@media (max-width: 768px) {
+  header.hero#home {
+    padding: 35px 0 45px !important;
+  }
+}
 header.hero#home .hero-photo {
   display: flex !important;
   justify-content: center !important;
