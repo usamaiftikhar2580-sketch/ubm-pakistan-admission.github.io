@@ -476,6 +476,57 @@ header.hero#home .hero-text h1 {
     font-size: clamp(35px, 9vw, 46px) !important;
   }
 }
+
+/* UBM Pakistan — Bigger hero text, moved lower */
+header.hero#home .hero-text {
+  position: relative !important;
+  top: 35px !important;
+}
+
+header.hero#home .hero-text h1 {
+  font-size: clamp(48px, 5.5vw, 72px) !important;
+  line-height: 1.15 !important;
+  margin-bottom: 28px !important;
+}
+
+header.hero#home .hero-text > p:not(.hero-phone) {
+  font-size: clamp(18px, 1.5vw, 22px) !important;
+  line-height: 1.8 !important;
+  max-width: 650px !important;
+}
+
+header.hero#home .hero-buttons .btn {
+  font-size: 18px !important;
+  padding: 16px 25px !important;
+}
+
+header.hero#home .hero-phone {
+  font-size: 21px !important;
+  margin-top: 24px !important;
+}
+
+@media (max-width: 700px) {
+  header.hero#home .hero-text {
+    top: 20px !important;
+  }
+
+  header.hero#home .hero-text h1 {
+    font-size: clamp(38px, 9vw, 48px) !important;
+  }
+
+  header.hero#home .hero-text > p:not(.hero-phone) {
+    font-size: 17px !important;
+  }
+
+  header.hero#home .hero-buttons .btn {
+    font-size: 16px !important;
+    padding: 13px 18px !important;
+  }
+
+  header.hero#home .hero-phone {
+    font-size: 18px !important;
+  }
+}
 </style>
 
 <style>
