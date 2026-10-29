@@ -3476,5 +3476,38 @@ header.hero#home .ubm-guardian-column {
 
 
 
+
+<style>
+header.hero#home {
+  padding-top: 85px !important;
+  padding-bottom: 55px !important;
+}
+
+header.hero#home .hero-text {
+  transform: translateY(20px) !important;
+}
+
+header.hero#home .hero-text h1 {
+  font-size: clamp(40px, 4.5vw, 60px) !important;
+  line-height: 1.15 !important;
+  margin-top: 0 !important;
+  margin-bottom: 22px !important;
+}
+
+@media (max-width: 700px) {
+  header.hero#home {
+    padding: 55px 18px 35px !important;
+  }
+
+  header.hero#home .hero-text {
+    transform: translateY(8px) !important;
+  }
+
+  header.hero#home .hero-text h1 {
+    font-size: clamp(34px, 8vw, 42px) !important;
+    line-height: 1.2 !important;
+  }
+}
+</style>
 </body>
 </html>
