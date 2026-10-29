@@ -742,8 +742,61 @@ header.hero#home .founder-role {
 }
 </style>
 
-</head><link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><body>
+<style>
+/* UBM Pakistan - Centered Hero Banner */
+
+header.hero#home > .w {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  justify-items: center !important;
+  gap: 20px !important;
+}
+
+header.hero#home .hero-text {
+  width: min(100%, 850px) !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  transform: none !important;
+  top: auto !important;
+}
+
+header.hero#home .hero-text > p {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+header.hero#home .hero-actions,
+header.hero#home .hero-buttons {
+  justify-content: center !important;
+}
+
+header.hero#home .hero-phone {
+  text-align: center !important;
+}
+
+header.hero#home .founder-signature {
+  margin: 0 auto !important;
+  width: min(100%, 360px) !important;
+}
+
+@media (max-width: 768px) {
+  header.hero#home .hero-text {
+    width: 100% !important;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+}
+
+</style>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
 <div class="top"><div class="w"><span>🟢 UBM Pakistan - Learn &amp; Earn</span><span class="top-contact">
 
   <a href="tel:+923040880992">
@@ -822,220 +875,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
      </div>
      </div>
   
-<!-- UBM AI GUARDIAN - HERO CHARACTER -->
-<div class="hero-photo ubm-guardian-column">
 
-  <div class="ubm-guardian-scene" id="ubmGuardianScene">
-
-    <div class="ubm-guardian-orbit"></div>
-    <div class="ubm-guardian-glow"></div>
-
-    <div class="ubm-guardian" id="ubmGuardian">
-
-      <div class="ubm-robot-label">
-        <span class="ubm-status-dot"></span>
-        UBM AI GUARDIAN
-      </div>
-
-      <svg
-        class="ubm-robot-svg"
-        viewBox="0 0 420 460"
-        role="img"
-        aria-label="UBM Pakistan futuristic AI Guardian robot"
-        xmlns="http://www.w3.org/2000/svg">
-
-        <defs>
-          <linearGradient id="ubmMetal" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#52635f"/>
-            <stop offset=".35" stop-color="#202b2a"/>
-            <stop offset=".7" stop-color="#0b1111"/>
-            <stop offset="1" stop-color="#354640"/>
-          </linearGradient>
-
-          <linearGradient id="ubmFace" x1="0" y1="0" x2="0.8" y2="1">
-            <stop offset="0" stop-color="#263c35"/>
-            <stop offset=".5" stop-color="#101918"/>
-            <stop offset="1" stop-color="#060a0a"/>
-          </linearGradient>
-
-          <linearGradient id="ubmGreen" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#b1ffcb"/>
-            <stop offset=".45" stop-color="#32f58a"/>
-            <stop offset="1" stop-color="#079b55"/>
-          </linearGradient>
-
-          <radialGradient id="ubmEyeGlow">
-            <stop offset="0" stop-color="#8bffb7" stop-opacity=".85"/>
-            <stop offset="1" stop-color="#19e77a" stop-opacity="0"/>
-          </radialGradient>
-
-          <filter id="ubmGlow">
-            <feGaussianBlur stdDeviation="5"/>
-          </filter>
-        </defs>
-
-        <!-- Neck -->
-        <path d="M174 322 L168 364 L252 364 L246 322Z"
-          fill="url(#ubmMetal)" stroke="#4b6a5a" stroke-width="2"/>
-
-        <path d="M190 335 L230 335 L230 355 L190 355Z"
-          fill="#0a1210" stroke="#19e77a" stroke-opacity=".65"/>
-
-        <!-- Shoulders and chest -->
-        <path d="M145 340
-          L112 354 Q82 367 70 412
-          L65 438 L355 438
-          L350 412 Q338 367 308 354
-          L275 340 L253 363 L167 363Z"
-          fill="url(#ubmMetal)" stroke="#4b6a5a" stroke-width="2"/>
-
-        <path d="M122 385 L150 370 L171 392 L160 425 L91 425Z"
-          fill="#111a17" stroke="#19e77a" stroke-opacity=".65"/>
-
-        <path d="M298 385 L270 370 L249 392 L260 425 L329 425Z"
-          fill="#111a17" stroke="#19e77a" stroke-opacity=".65"/>
-
-        <path d="M177 379 L243 379 L257 429 L163 429Z"
-          fill="#080e0c" stroke="#19e77a" stroke-width="2"/>
-
-        <path d="M190 395 L230 395 L237 410 L183 410Z"
-          fill="#19e77a" opacity=".18"/>
-
-        <text x="210" y="407" fill="#72ffad"
-          font-size="13" font-weight="800"
-          text-anchor="middle" letter-spacing="3">UBM</text>
-
-        <path d="M184 418 L236 418"
-          stroke="#19e77a" stroke-width="2" stroke-linecap="round"/>
-
-        <!-- Side head hardware -->
-        <path d="M119 160 L91 170 L91 238 L119 250Z"
-          fill="url(#ubmMetal)" stroke="#536c60" stroke-width="2"/>
-
-        <path d="M301 160 L329 170 L329 238 L301 250Z"
-          fill="url(#ubmMetal)" stroke="#536c60" stroke-width="2"/>
-
-        <rect x="95" y="190" width="9" height="35" rx="4"
-          fill="#19e77a" opacity=".9"/>
-
-        <rect x="316" y="190" width="9" height="35" rx="4"
-          fill="#19e77a" opacity=".9"/>
-
-        <!-- Main head -->
-        <path d="M153 76
-          L267 76
-          L300 111
-          L312 169
-          L298 259
-          L267 299
-          L153 299
-          L122 259
-          L108 169
-          L120 111Z"
-          fill="url(#ubmMetal)"
-          stroke="#61786b" stroke-width="2.5"/>
-
-        <!-- Forehead armor -->
-        <path d="M155 88 L265 88 L283 111 L137 111Z"
-          fill="#080e0c" stroke="#19e77a" stroke-opacity=".5"/>
-
-        <path d="M184 98 L236 98"
-          stroke="url(#ubmGreen)" stroke-width="3" stroke-linecap="round"/>
-
-        <!-- Face visor -->
-        <path d="M133 133
-          L287 133
-          L290 213
-          L264 257
-          L156 257
-          L130 213Z"
-          fill="url(#ubmFace)"
-          stroke="#3e6652" stroke-width="2"/>
-
-        <!-- Eye glow -->
-        <ellipse cx="169" cy="183" rx="39" ry="31"
-          fill="url(#ubmEyeGlow)" opacity=".7"/>
-
-        <ellipse cx="251" cy="183" rx="39" ry="31"
-          fill="url(#ubmEyeGlow)" opacity=".7"/>
-
-        <!-- Eye sockets -->
-        <path d="M140 169 L181 159 L194 179 L184 197 L145 194Z"
-          fill="#050a09" stroke="#426451" stroke-width="1.5"/>
-
-        <path d="M280 169 L239 159 L226 179 L236 197 L275 194Z"
-          fill="#050a09" stroke="#426451" stroke-width="1.5"/>
-
-        <!-- Moving eyes -->
-        <g id="ubmLeftEye">
-          <path d="M148 176 L180 170 L185 180 L177 188 L150 187Z"
-            fill="url(#ubmGreen)"/>
-          <circle cx="166" cy="180" r="5" fill="#e3ffeb"/>
-        </g>
-
-        <g id="ubmRightEye">
-          <path d="M272 176 L240 170 L235 180 L243 188 L270 187Z"
-            fill="url(#ubmGreen)"/>
-          <circle cx="254" cy="180" r="5" fill="#e3ffeb"/>
-        </g>
-
-        <!-- Nose bridge -->
-        <path d="M203 180 L196 210 L210 219 L224 210 L217 180"
-          fill="#18251f" stroke="#456653" stroke-width="1.5"/>
-
-        <!-- Lower faceplate -->
-        <path d="M158 228 L188 238 L232 238 L262 228 L251 255 L169 255Z"
-          fill="#111b17" stroke="#385947" stroke-width="1.5"/>
-
-        <path d="M184 244 L236 244"
-          stroke="#19e77a" stroke-width="3" stroke-linecap="round"/>
-
-        <path d="M194 251 L226 251"
-          stroke="#527a61" stroke-width="2" stroke-linecap="round"/>
-
-        <!-- Temple details -->
-        <path d="M126 147 L137 153 M124 158 L135 164
-          M294 147 L283 153 M296 158 L285 164"
-          stroke="#19e77a" stroke-width="2" stroke-linecap="round"/>
-
-        <!-- Bottom light details -->
-        <path d="M142 276 L165 289 M278 276 L255 289"
-          stroke="#19e77a" stroke-width="3" stroke-linecap="round"/>
-
-        <!-- Antenna -->
-        <path d="M210 76 L210 53"
-          stroke="#71877a" stroke-width="5" stroke-linecap="round"/>
-
-        <circle cx="210" cy="45" r="12"
-          fill="#19e77a" opacity=".3" filter="url(#ubmGlow)"/>
-
-        <circle cx="210" cy="45" r="6"
-          fill="url(#ubmGreen)"/>
-
-        <!-- Decorative light bars -->
-        <path d="M110 308 L135 308 M285 308 L310 308"
-          stroke="#19e77a" stroke-width="3" stroke-linecap="round"/>
-
-      </svg>
-
-      <div class="ubm-guardian-caption">
-        <span>INTELLIGENCE</span>
-        <span class="ubm-caption-line"></span>
-        <span>INNOVATION</span>
-      </div>
-
-    </div>
+<!-- UBM PAKISTAN FOUNDER INFORMATION -->
+<div class="founder-signature">
+  <span class="founder-line"></span>
+  <div class="founder-name">Usman Iftikhar</div>
+  <div class="founder-role">
+    FOUNDER &amp; DIGITAL SKILLS MENTOR
   </div>
-
-  <!-- Keep the existing founder information -->
-  <div class="founder-signature">
-    <span class="founder-line"></span>
-    <div class="founder-name">Usman Iftikhar</div>
-    <div class="founder-role">
-      FOUNDER &amp; DIGITAL SKILLS MENTOR
-    </div>
-  </div>
-
+</div>
 </div>
 
 </header>
@@ -3092,7 +2940,7 @@ header.hero#home .ubm-guardian-column {
   scene.addEventListener("pointercancel", resetGuardian);
 })();
 </script>
-
+<script>
 (() => {
   const canvas = document.getElementById("ubm-particle-universe");
   const hero = document.querySelector("header.hero#home");
@@ -3242,10 +3090,11 @@ header.hero#home .ubm-guardian-column {
 
   window.addEventListener("resize", resize);
 
+ 
   resize();
   start();
 })();
+</script>
+
 </body>
 </html>
-
-</body></html>
