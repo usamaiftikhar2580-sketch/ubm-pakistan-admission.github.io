@@ -794,26 +794,32 @@ header.hero#home .founder-signature {
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-/* UBM Pakistan — New centered hero banner */
+
+/* UBM Pakistan — Compact Professional Hero */
 
 header.hero#home {
   position: relative !important;
   isolation: isolate;
-  overflow: hidden;
-  min-height: 520px;
-  padding: 85px 20px !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+  min-height: 0 !important;
+  height: auto !important;
   box-sizing: border-box;
+  padding: 46px 22px 38px !important;
+  overflow: hidden !important;
   background:
-    radial-gradient(ellipse at center,
-      rgba(0, 180, 85, 0.12), transparent 65%),
-    #070d0a;
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgba(0, 180, 85, 0.13),
+      transparent 68%
+    ),
+    #070d0a !important;
 }
 
-#ubm-particle-universe {
-  position: absolute;
+header.hero#home #ubm-particle-universe {
+  position: absolute !important;
   inset: 0;
   width: 100%;
   height: 100%;
@@ -822,15 +828,16 @@ header.hero#home {
 }
 
 header.hero#home > .ubm-hero-inner {
-  position: relative;
+  position: relative !important;
   z-index: 1;
   display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1050px;
   margin: 0 auto !important;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header.hero#home .hero-text {
@@ -839,59 +846,119 @@ header.hero#home .hero-text {
   left: auto !important;
   transform: none !important;
   width: 100% !important;
-  max-width: 900px;
+  max-width: 920px !important;
   margin: 0 auto !important;
+  padding: 0 !important;
   text-align: center !important;
+  box-sizing: border-box;
 }
 
 header.hero#home .hero-text .pill {
   display: inline-block;
-  margin: 0 auto 22px;
+  max-width: 100%;
+  margin: 0 auto 16px !important;
+  line-height: 1.5;
 }
 
 header.hero#home .hero-text h1 {
-  max-width: 850px;
-  margin: 0 auto 22px !important;
-  line-height: 1.15;
+  max-width: 900px;
+  margin: 0 auto 16px !important;
+  font-size: clamp(38px, 4.2vw, 54px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -1.2px;
   text-align: center !important;
 }
 
 header.hero#home .hero-text h1 span {
   display: block;
+  color: #65dc4f !important;
 }
 
-header.hero#home .hero-text > p {
-  max-width: 760px;
-  margin: 0 auto 25px !important;
-  line-height: 1.8;
+header.hero#home .hero-text > p:not(.hero-phone) {
+  max-width: 690px !important;
+  margin: 0 auto 22px !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
   text-align: center !important;
+  color: #c0cbc4;
 }
 
-header.hero#home .hero-actions,
-header.hero#home .hero-buttons {
-  display: flex;
+header.hero#home .hero-actions {
+  display: flex !important;
   justify-content: center !important;
-  align-items: center;
+  width: 100%;
+}
+
+header.hero#home .hero-buttons {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: row !important;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 12px !important;
+  width: auto;
+}
+
+header.hero#home .hero-buttons .btn {
+  width: auto !important;
+  min-width: 145px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 header.hero#home .hero-phone {
-  margin: 24px auto 0 !important;
+  margin: 14px auto 0 !important;
   text-align: center !important;
-  font-size: 17px;
+  font-size: 16px !important;
   font-weight: 600;
 }
 
-header.hero#home .hero-phone a {
-  color: #39ef91;
+header.hero#home .hero-phone a,
+header.hero#home .hero-phone i {
+  color: #39ef91 !important;
   text-decoration: none;
 }
 
 header.hero#home .hero-phone i {
-  margin-right: 8px;
-  color: #39ef91;
+  margin-right: 7px;
 }
+
+/* Tablet and mobile */
+@media (max-width: 700px) {
+  header.hero#home {
+    padding: 38px 18px 32px !important;
+  }
+
+  header.hero#home .hero-text .pill {
+    margin-bottom: 14px !important;
+    font-size: 12px;
+  }
+
+  header.hero#home .hero-text h1 {
+    font-size: clamp(32px, 8vw, 42px) !important;
+    letter-spacing: -0.6px;
+    line-height: 1.15 !important;
+  }
+
+  header.hero#home .hero-text > p:not(.hero-phone) {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 20px !important;
+  }
+
+  header.hero#home .hero-buttons {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  header.hero#home .hero-buttons .btn {
+    width: min(100%, 280px) !important;
+  }
+}
+
 
 @media (max-width: 700px) {
   header.hero#home {
