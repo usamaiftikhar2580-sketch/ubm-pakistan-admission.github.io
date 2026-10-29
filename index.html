@@ -1157,7 +1157,37 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </section>
 
 <style>
-/* Move only hero text slightly upward */
+
+/* UBM PAKISTAN — INTERACTIVE PARTICLE UNIVERSE */
+header.hero#home {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+#ubm-particle-universe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Keep hero content and robot above the particles */
+header.hero#home > *:not(#ubm-particle-universe) {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #ubm-particle-universe {
+    opacity: 0.35;
+  }
+}
+
+  /* Move only hero text slightly upward */
 header.hero#home .hero-text {
   transform: translateY(-15px);
 }
@@ -3062,6 +3092,159 @@ header.hero#home .ubm-guardian-column {
   scene.addEventListener("pointercancel", resetGuardian);
 })();
 </script>
+
+(() => {
+  const canvas = document.getElementById("ubm-particle-universe");
+  const hero = document.querySelector("header.hero#home");
+
+  if (!canvas || !hero) return;
+
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+
+  let width = 0;
+  let height = 0;
+  let particles = [];
+  let animationId = null;
+  let running = false;
+  let lastFrame = 0;
+
+  const mouse = { x: -1000, y: -1000, active: false };
+  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+  const count = isMobile ? 32 : 65;
+  const connectDistance = 115;
+
+  function resize() {
+    const rect = hero.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+
+    width = rect.width;
+    height = rect.height;
+
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    particles = Array.from({ length: count }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.35,
+      vy: (Math.random() - 0.5) * 0.35,
+      r: Math.random() * 1.5 + 0.7
+    }));
+  }
+
+  function draw(time = 0) {
+    if (!running) return;
+
+    animationId = requestAnimationFrame(draw);
+
+    if (time - lastFrame < 30) return;
+    lastFrame = time;
+
+    ctx.clearRect(0, 0, width, height);
+
+    for (const p of particles) {
+      if (!reduceMotion.matches) {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+        if (mouse.active) {
+          const dx = p.x - mouse.x;
+          const dy = p.y - mouse.y;
+          const distance = Math.hypot(dx, dy);
+
+          if (distance < 125 && distance > 0) {
+            const force = (125 - distance) / 125;
+            p.x += (dx / distance) * force * 0.7;
+            p.y += (dy / distance) * force * 0.7;
+          }
+        }
+      }
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(55, 255, 135, 0.8)";
+      ctx.shadowBlur = 7;
+      ctx.shadowColor = "rgba(0, 255, 110, 0.45)";
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const a = particles[i];
+        const b = particles[j];
+        const distance = Math.hypot(a.x - b.x, a.y - b.y);
+
+        if (distance < connectDistance) {
+          const alpha = (1 - distance / connectDistance) * 0.32;
+
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(0, 255, 115, ${alpha})`;
+          ctx.lineWidth = 0.7;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  function start() {
+    if (running || document.hidden) return;
+    running = true;
+    animationId = requestAnimationFrame(draw);
+  }
+
+  function stop() {
+    running = false;
+    if (animationId !== null) {
+      cancelAnimationFrame(animationId);
+      animationId = null;
+    }
+  }
+
+  hero.addEventListener("pointermove", (event) => {
+    const rect = hero.getBoundingClientRect();
+    mouse.x = event.clientX - rect.left;
+    mouse.y = event.clientY - rect.top;
+    mouse.active = true;
+  }, { passive: true });
+
+  hero.addEventListener("pointerleave", () => {
+    mouse.active = false;
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stop();
+    } else {
+      start();
+    }
+  });
+
+  reduceMotion.addEventListener?.("change", () => {
+    if (reduceMotion.matches) {
+      mouse.active = false;
+    }
+  });
+
+  window.addEventListener("resize", resize);
+
+  resize();
+  start();
+})();
 </body>
 </html>
 
