@@ -3009,42 +3009,7 @@ header.hero#home .ubm-guardian-column {
 }
 </style>
 
-<script>
-(function () {
-  const scene = document.getElementById("ubmGuardianScene");
-  const robot = document.getElementById("ubmGuardian");
-  const leftEye = document.getElementById("ubmLeftEye");
-  const rightEye = document.getElementById("ubmRightEye");
 
-  if (!scene || !robot || !leftEye || !rightEye) return;
-
-  // Mouse/touch position is converted to a gentle eye movement.
-  function moveGuardian(event) {
-    const rect = scene.getBoundingClientRect();
-
-    if (!rect.width || !rect.height) return;
-
-    const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-    const y = ((event.clientY - rect.top) / rect.height) * 2 - 1;
-
-    const clamp = (n, min, max) =>
-      Math.max(min, Math.min(max, n));
-
-    const dx = clamp(x, -1, 1);
-    const dy = clamp(y, -1, 1);
-
-    // Small movement looks more professional than exaggerated tracking.
-    leftEye.setAttribute(
-      "transform",
-      `translate(${dx * 4} ${dy * 3})`
-    );
-
-    rightEye.setAttribute(
-      "transform",
-      `translate(${dx * 4} ${dy * 3})`
-    );
-
-    
 <script>
 (() => {
   const canvas = document.getElementById("ubm-particle-universe");
@@ -3188,18 +3153,13 @@ header.hero#home .ubm-guardian-column {
     }
   });
 
-  reduceMotion.addEventListener?.("change", () => {
-    if (reduceMotion.matches) {
-      mouse.active = false;
-    }
-  });
-
   window.addEventListener("resize", resize);
 
   resize();
   start();
 })();
 </script>
+
 
 
 
