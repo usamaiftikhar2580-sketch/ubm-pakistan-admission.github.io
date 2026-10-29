@@ -2181,9 +2181,151 @@ header.hero#home .hero-phone {
 <div class="fb"><div class="fh"><h3>Admission Form</h3><p>Special fee: <s>Rs. 25,000</s> <b style="color:var(--g)">Rs. 20,000</b> (Save Rs. 5,000). Please provide accurate information.</p></div>
 <div id="status" class="status"></div><form id="admissionForm"><div class="sec"><div class="st"><div class="num">1</div><h4>Student Information</h4></div><div class="ag"><div class="field"><label>Full Name <span>*</span></label><input type="text" name="fullName" placeholder="" required></div><div class="field"><label>Father / Guardian Name <span>*</span></label><input type="text" name="guardianName" placeholder="" required></div><div class="field"><label>Date of Birth <span>*</span></label><input type="date" name="dob" placeholder="" required></div><div class="field"><label>Gender <span>*</span></label><select name="gender" required><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option></select></div><div class="field"><label>CNIC / B-Form Number</label><input type="text" name="cnic" placeholder="Optional"></div></div></div><div class="sec"><div class="st"><div class="num">2</div><h4>Contact Information</h4></div><div class="ag"><div class="field"><label>WhatsApp Number <span>*</span></label><input type="tel" name="whatsapp" placeholder="03XX XXXXXXX" required></div><div class="field"><label>Alternate Contact Number</label><input type="tel" name="alternatePhone" placeholder=""></div><div class="field"><label>Email Address <span>*</span></label><input type="email" name="email" placeholder="" required></div><div class="field"><label>City <span>*</span></label><input type="text" name="city" placeholder="" required></div><div class="field full"><label>Complete Address <span>*</span></label><textarea name="address" required></textarea></div></div></div><div class="sec"><div class="st"><div class="num">3</div><h4>Education &amp; Background</h4></div><div class="ag"><div class="field"><label>Highest Qualification <span>*</span></label><select name="qualification" required><option value="">Select</option><option>Matric</option><option>Intermediate</option><option>Graduation</option><option>Master's</option><option>Other</option></select></div><div class="field"><label>Current Status <span>*</span></label><select name="status" required><option value="">Select</option><option>Student</option><option>Job</option><option>Business</option><option>Freelancer</option><option>Unemployed</option><option>Other</option></select></div></div></div><div class="sec"><div class="st"><div class="num">4</div><h4>eBay Experience</h4></div><div class="ag"><div class="field full"><label>Previous eBay experience? <span>*</span></label><div class="opts"><label class="opt"><input type="radio" name="ebayExperience" value="Yes" required> Yes</label><label class="opt"><input type="radio" name="ebayExperience" value="No"> No</label></div></div><div class="field full"><label>Currently have an eBay account? <span>*</span></label><div class="opts"><label class="opt"><input type="radio" name="ebayAccount" value="Yes" required> Yes</label><label class="opt"><input type="radio" name="ebayAccount" value="No"> No</label></div></div><div class="field full"><label>Why do you want to learn eBay? <span>*</span></label><textarea name="reason" required></textarea></div><div class="field full"><label>What do you want to achieve after the course? <span>*</span></label><textarea name="goal" required></textarea></div></div></div><div class="sec"><div class="st"><div class="num">5</div><h4>Course &amp; Batch</h4></div><div class="ag"><div class="field"><label>Course</label><input value="eBay Training Program" readonly></div><div class="field"><label>Select Batch <span>*</span></label><select name="batch" required><option value="">Select</option><option>Batch 1</option><option>Batch 2</option><option>Upcoming Batch</option></select></div><div class="field full"><label>How did you hear about UBM Pakistan? <span>*</span></label><select name="source" required><option value="">Select</option><option>Facebook</option><option>Instagram</option><option>TikTok</option><option>WhatsApp</option><option>YouTube</option><option>Friend / Relative</option><option>Other</option></select></div></div></div><div class="sec"><div class="st"><div class="num">6</div><h4>Course Fee</h4></div><div class="feebox"><div class="fr"><span>Regular Course Fee</span><b>Rs. 25,000</b></div><div class="fr"><span>Admission Discount</span><b>Rs. 5,000</b></div><div class="fr tot"><span>Special Admission Fee</span><span>Rs. 20,000</span></div></div><label class="chk"><input type="checkbox" name="feeConfirmation" required> I understand that the special admission fee is Rs. 20,000.</label></div><div class="sec"><div class="st"><div class="num">7</div><h4>Guardian / Emergency Contact</h4></div><div class="ag"><div class="field"><label>Contact Name <span>*</span></label><input type="text" name="emergencyName" placeholder="" required></div><div class="field"><label>Relationship <span>*</span></label><input type="text" name="relationship" placeholder="" required></div><div class="field"><label>Contact Number <span>*</span></label><input type="text" name="emergencyPhone" placeholder="" required></div></div></div><div class="sec"><div class="st"><div class="num">8</div><h4>Declaration</h4></div><div class="decl"><p>I confirm that the information provided by me is correct. I understand the course fee and admission terms of the UBM Pakistan eBay Training Program.</p><label class="chk"><input type="checkbox" name="declaration" required> I agree to the above declaration.</label></div></div><div style="text-align:center"><button class="btn" id="submitBtn" type="submit">Submit Admission Application</button><p class="nt">Your application will be securely sent to UBM Pakistan.</p></div></form>
 <div class="success" id="successMessage"><div class="ok">✓</div><h3>Application Submitted!</h3><p>Your admission application has been received successfully. Please save your admission number.</p><div class="an" id="admissionNo"></div></div></div></div></section>
-<section id="contact"><div class="w"><h2>Contact <span>Us</span></h2><p class="sub">Admission, fee aur batch ki maloomat ke liye rabta karein.</p>
-<div class="ct"><a href="tel:03040880992"><b>📞 Phone</b>03040880992</a><a href="https://wa.me/923040880992"><b>💬 WhatsApp</b>03040880992</a>
-<a href="mailto:contact.ubmpakistan@gmail.com"><b>✉️ Email</b><span>contact.ubmpakistan@gmail.com</span></a></div></div></section>
+
+<style>
+#contact {
+  padding: 80px 20px;
+  background: radial-gradient(ellipse at top, rgba(107,220,91,.09), transparent 60%), #0d1114;
+  color: #fff;
+}
+#contact .contact-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+#contact .contact-heading {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 42px;
+}
+#contact .contact-tag {
+  color: #9fe891;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+#contact h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 15px 0;
+}
+#contact h2 span { color: #6bdc5b; }
+#contact .contact-subtitle {
+  color: #b9c8bd;
+  line-height: 1.8;
+}
+#contact .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+#contact .contact-card {
+  padding: 30px;
+  background: linear-gradient(145deg, #18221c, #111714);
+  border: 1px solid rgba(107,220,91,.25);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: .25s ease;
+}
+#contact .contact-card:hover {
+  transform: translateY(-5px);
+  border-color: #6bdc5b;
+}
+#contact .contact-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  color: #6bdc5b;
+  background: rgba(107,220,91,.10);
+  border: 1px solid rgba(107,220,91,.25);
+  font-size: 25px;
+  margin-bottom: 22px;
+}
+#contact .contact-card h3 {
+  font-size: 21px;
+  margin: 0 0 10px;
+}
+#contact .contact-card p {
+  color: #b9c8bd;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 24px;
+  overflow-wrap: anywhere;
+}
+#contact .contact-btn {
+  display: inline-block;
+  margin-top: auto;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #6bdc5b;
+  color: #0d160e;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+}
+#contact .contact-btn:hover { background: #9fe891; }
+#contact .contact-footer {
+  text-align: center;
+  margin-top: 32px;
+  color: #b9c8bd;
+  font-size: 14px;
+}
+#contact .contact-footer strong { color: #9fe891; }
+
+@media(max-width:760px) {
+  #contact { padding: 55px 16px; }
+  #contact .contact-grid { grid-template-columns: 1fr; }
+  #contact .contact-card { padding: 25px; }
+}
+</style>
+
+<section id="contact">
+  <div class="contact-inner">
+
+    <div class="contact-heading">
+      <span class="contact-tag">LET'S CONNECT</span>
+      <h2>Get in <span>Touch</span></h2>
+      <p class="contact-subtitle">
+        Have questions about our courses, fees or upcoming batches?
+        Our team is here to help you take the next step.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <div class="contact-icon">☎</div>
+        <h3>Call Our Team</h3>
+        <p>Speak with us for course and admission information.</p>
+        <a class="contact-btn" href="tel:+923040880992">Call Now →</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">✆</div>
+        <h3>WhatsApp Us</h3>
+        <p>Message us about fees, courses and new batches.</p>
+        <a class="contact-btn" href="https://wa.me/923040880992"
+           target="_blank" rel="noopener noreferrer">Chat on WhatsApp →</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">✉</div>
+        <h3>Email Our Team</h3>
+        <p>Send us your questions and admission inquiries by email.</p>
+        <a class="contact-btn" href="mailto:contact.ubmpakistan@gmail.com">Send an Email →</a>
+      </div>
+
+    </div>
+
+    <div class="contact-footer">
+      <strong>UBM Pakistan</strong> — Learn Skills. Build Your Future.
+    </div>
+
+  </div>
+</section>
+
 <!-- ================= UBM PREMIUM STUDENT REVIEWS ================= -->
 <style>
 .ubm-premium-reviews {
