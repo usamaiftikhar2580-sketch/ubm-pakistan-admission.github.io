@@ -469,11 +469,68 @@ header.hero#home .hero-photo .founder-signature {
   }
 }
 
-/* UBM Pakistan — Bigger hero text, moved lower */
+
+/* UBM Pakistan — Hero text bigger and lower */
+
 header.hero#home .hero-text {
   position: relative !important;
-  top: 35px !important;
+  top: 65px !important;
 }
+
+header.hero#home .hero-text h1 {
+  position: relative !important;
+  top: 0 !important;
+  font-size: clamp(54px, 6vw, 76px) !important;
+  line-height: 1.15 !important;
+  margin-bottom: 30px !important;
+  max-width: 900px !important;
+}
+
+header.hero#home .hero-text > p:not(.hero-phone) {
+  font-size: clamp(21px, 2vw, 25px) !important;
+  line-height: 1.7 !important;
+  max-width: 720px !important;
+  margin-bottom: 28px !important;
+}
+
+header.hero#home .hero-buttons .btn {
+  font-size: 20px !important;
+  padding: 18px 30px !important;
+}
+
+header.hero#home .hero-phone,
+header.hero#home .hero-phone a {
+  font-size: 24px !important;
+}
+
+header.hero#home .hero-phone {
+  margin-top: 26px !important;
+}
+
+@media (max-width: 700px) {
+  header.hero#home .hero-text {
+    top: 30px !important;
+  }
+
+  header.hero#home .hero-text h1 {
+    font-size: clamp(40px, 9vw, 52px) !important;
+  }
+
+  header.hero#home .hero-text > p:not(.hero-phone) {
+    font-size: 18px !important;
+  }
+
+  header.hero#home .hero-buttons .btn {
+    font-size: 17px !important;
+    padding: 14px 20px !important;
+  }
+
+  header.hero#home .hero-phone,
+  header.hero#home .hero-phone a {
+    font-size: 20px !important;
+  }
+}
+
 
 header.hero#home .hero-text h1 {
   font-size: clamp(48px, 5.5vw, 72px) !important;
