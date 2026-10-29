@@ -460,6 +460,22 @@ header.hero#home .hero-photo .founder-signature {
   }
 }
 
+
+/* Main hero heading: lower and larger */
+header.hero#home .hero-text h1 {
+  position: relative !important;
+  top: 18px !important;
+  font-size: clamp(44px, 5vw, 64px) !important;
+  line-height: 1.15 !important;
+  margin-bottom: 30px !important;
+}
+
+@media (max-width: 700px) {
+  header.hero#home .hero-text h1 {
+    top: 10px !important;
+    font-size: clamp(35px, 9vw, 46px) !important;
+  }
+}
 </style>
 
 <style>
