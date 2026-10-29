@@ -793,6 +793,133 @@ header.hero#home .founder-signature {
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<style>
+/* UBM Pakistan — New centered hero banner */
+
+header.hero#home {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 520px;
+  padding: 85px 20px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background:
+    radial-gradient(ellipse at center,
+      rgba(0, 180, 85, 0.12), transparent 65%),
+    #070d0a;
+}
+
+#ubm-particle-universe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+header.hero#home > .ubm-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex !important;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+header.hero#home .hero-text {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  max-width: 900px;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+header.hero#home .hero-text .pill {
+  display: inline-block;
+  margin: 0 auto 22px;
+}
+
+header.hero#home .hero-text h1 {
+  max-width: 850px;
+  margin: 0 auto 22px !important;
+  line-height: 1.15;
+  text-align: center !important;
+}
+
+header.hero#home .hero-text h1 span {
+  display: block;
+}
+
+header.hero#home .hero-text > p {
+  max-width: 760px;
+  margin: 0 auto 25px !important;
+  line-height: 1.8;
+  text-align: center !important;
+}
+
+header.hero#home .hero-actions,
+header.hero#home .hero-buttons {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+header.hero#home .hero-phone {
+  margin: 24px auto 0 !important;
+  text-align: center !important;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+header.hero#home .hero-phone a {
+  color: #39ef91;
+  text-decoration: none;
+}
+
+header.hero#home .hero-phone i {
+  margin-right: 8px;
+  color: #39ef91;
+}
+
+@media (max-width: 700px) {
+  header.hero#home {
+    min-height: 480px;
+    padding: 65px 18px !important;
+  }
+
+  header.hero#home .hero-text h1 {
+    font-size: clamp(32px, 8vw, 46px);
+  }
+
+  header.hero#home .hero-text > p {
+    font-size: 15px;
+  }
+
+  header.hero#home .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header.hero#home .hero-buttons .btn {
+    width: min(100%, 280px);
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -833,14 +960,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <div class="menu" id="mn"><a href="#home">Home</a><a href="#about">About</a><a href="#ubm-courses">Courses</a><a href="#programs-services">Services</a><a href="#ubm-announcements">Announcements</a><a href="#announcements">Announcements</a><a href="#contact">Contact Us</a><a class="btn" href="https://wa.me/923040880992">Enroll Now</a></div></div></nav>
 
 
-<header class="hero" id="home">
-  <div class="w">
 
-    <!-- LEFT SIDE: TEXT -->
+<header class="hero" id="home">
+
+  <canvas id="ubm-particle-universe" aria-hidden="true"></canvas>
+
+  <div class="w ubm-hero-inner">
     <div class="hero-text">
 
       <span class="pill">
-        Pakistan's Skills & E-Commerce Training
+        Pakistan's Skills &amp; E-Commerce Training
       </span>
 
       <h1>
@@ -854,36 +983,26 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         through practical training and expert guidance.
       </p>
 
-     <div class="hero-actions">
+      <div class="hero-actions">
+        <div class="hero-buttons">
+          <a class="btn"
+             href="https://wa.me/923040880992?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20join%20UBM%20Pakistan">
+            Enroll Now
+          </a>
 
-<div class="hero-buttons">
-  <a class="btn"
-     href="https://wa.me/923040880992?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20join%20UBM%20Pakistan">
-    Enroll Now
-  </a>
+          <a class="btn o" href="#courses">
+            Explore Courses
+          </a>
+        </div>
+      </div>
 
-  <a class="btn o" href="#courses">
-    Explore Courses
-  </a>
-</div>
+      <p class="hero-phone">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+923040880992">+92 304 0880992</a>
+      </p>
 
- <p class="hero-phone">
-  <i class="fa-solid fa-phone"></i>
-  <a href="tel:+923040880992">+92 304 0880992</a>
-</p> 
-
-     </div>
-     </div>
-  
-<!-- UBM PAKISTAN FOUNDER INFORMATION -->
-<div class="founder-signature">
-  <span class="founder-line"></span>
-  <div class="founder-name">Usman Iftikhar</div>
-  <div class="founder-role">
-    FOUNDER &amp; DIGITAL SKILLS MENTOR
+    </div>
   </div>
-</div>
-</div>
 
 </header>
 
@@ -2925,21 +3044,7 @@ header.hero#home .ubm-guardian-column {
       `translate(${dx * 4} ${dy * 3})`
     );
 
-    robot.style.transform =
-      `translate3d(${dx * 5}px, ${dy * 4}px, 0)`;
-  }
-
-  function resetGuardian() {
-    leftEye.setAttribute("transform", "translate(0 0)");
-    rightEye.setAttribute("transform", "translate(0 0)");
-    robot.style.transform = "translate3d(0,0,0)";
-  }
-
-  scene.addEventListener("pointermove", moveGuardian);
-  scene.addEventListener("pointerleave", resetGuardian);
-  scene.addEventListener("pointercancel", resetGuardian);
-})();
-</script>
+    
 <script>
 (() => {
   const canvas = document.getElementById("ubm-particle-universe");
@@ -3057,6 +3162,7 @@ header.hero#home .ubm-guardian-column {
 
   function stop() {
     running = false;
+
     if (animationId !== null) {
       cancelAnimationFrame(animationId);
       animationId = null;
@@ -3090,11 +3196,12 @@ header.hero#home .ubm-guardian-column {
 
   window.addEventListener("resize", resize);
 
- 
   resize();
   start();
 })();
 </script>
+
+
 
 </body>
 </html>
