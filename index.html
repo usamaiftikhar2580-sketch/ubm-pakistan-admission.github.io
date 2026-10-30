@@ -576,6 +576,152 @@ header.hero#home .hero-phone {
     font-size: 18px !important;
   }
 }
+
+/* UBM PAKISTAN — PROFESSIONAL COURSE BANNER */
+.ubm-course-banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 65px 24px;
+  margin: 0 auto 35px;
+  box-sizing: border-box;
+  border: 1px solid rgba(112, 223, 66, 0.3);
+  border-radius: 0 0 24px 24px;
+  background:
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(112, 223, 66, 0.19),
+      transparent 42%
+    ),
+    linear-gradient(125deg, #080d0a 0%, #101b13 55%, #14251a 100%);
+  color: #ffffff;
+}
+
+.ubm-course-banner::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -65px;
+  bottom: -110px;
+  border: 1px solid rgba(112, 223, 66, 0.35);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 25px rgba(112, 223, 66, 0.035),
+    0 0 0 50px rgba(112, 223, 66, 0.025);
+  pointer-events: none;
+}
+
+.ubm-course-banner-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.ubm-course-banner .ubm-banner-label {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 9px 14px;
+  border: 1px solid rgba(112, 223, 66, 0.35);
+  border-radius: 30px;
+  background: rgba(112, 223, 66, 0.08);
+  color: #70df42;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.ubm-course-banner h2 {
+  max-width: 780px;
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.ubm-course-banner h2 span {
+  color: #70df42;
+}
+
+.ubm-course-banner .ubm-banner-description {
+  max-width: 680px;
+  margin: 0 0 25px;
+  color: #c4d0c6;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.ubm-course-banner .ubm-banner-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 28px;
+}
+
+.ubm-course-banner .ubm-banner-features span {
+  padding: 10px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #e9f0eb;
+  font-size: 13px;
+}
+
+.ubm-course-banner .ubm-banner-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ubm-course-banner .ubm-banner-buttons a {
+  display: inline-block;
+  padding: 13px 21px;
+  border: 1px solid #70df42;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.ubm-course-banner .ubm-enroll-btn {
+  background: #70df42;
+  color: #081006;
+}
+
+.ubm-course-banner .ubm-explore-btn {
+  background: transparent;
+  color: #70df42;
+}
+
+.ubm-course-banner .ubm-banner-buttons a:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .ubm-course-banner {
+    padding: 42px 20px;
+    border-radius: 0 0 18px 18px;
+  }
+
+  .ubm-course-banner .ubm-banner-description {
+    font-size: 14px;
+  }
+
+  .ubm-course-banner .ubm-banner-features {
+    gap: 8px;
+  }
+
+  .ubm-course-banner .ubm-banner-features span {
+    font-size: 12px;
+  }
+
+  .ubm-course-banner .ubm-banner-buttons a {
+    text-align: center;
+  }
+}
 </style>
 
 <style>
