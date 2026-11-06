@@ -1864,147 +1864,264 @@ header.hero#home .hero-phone {
 
   <div class="ubm-difference-wrap">
 
-    <!-- Heading and Contact -->
-    <div class="ubm-difference-top">
+    <!-- ================= UBM DIFFERENCE SECTION START ================= -->
+<style>
+  /* Base Section Styling */
+  .ubm-difference-section {
+    background-color: #f4f8fa;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333333;
+  }
 
-      <div class="ubm-difference-intro">
-        <span class="ubm-small-title">THE UBM DIFFERENCE</span>
+  .ubm-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-        <h2>Why Choose UBM Pakistan?</h2>
+  /* Header Section */
+  .ubm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
 
-        <p>
-          At UBM Pakistan, we focus on practical digital skills,
-          professional guidance and real learning experiences.
-          Our goal is to help students build confidence, develop
-          valuable skills and explore opportunities in the
-          global digital marketplace.
+  .ubm-title-area {
+    max-width: 750px;
+  }
+
+  .ubm-subtitle {
+    color: #5b8c38;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .ubm-main-heading {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0 0 15px 0;
+  }
+
+  .ubm-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0;
+  }
+
+  /* WhatsApp Help Button */
+  .ubm-help-btn {
+    background-color: #156d48;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+
+  .ubm-help-btn:hover {
+    background-color: #0f5236;
+  }
+
+  /* 4 Grid Cards Layout */
+  .ubm-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* Single Card Styling */
+  .ubm-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px 20px 20px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  /* Image / Logo Box */
+  .ubm-card-logo-box {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .ubm-card-logo-box img {
+    max-height: 60px;
+    max-width: 140px;
+    object-fit: contain;
+  }
+
+  .ubm-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 15px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ubm-card-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #64748b;
+    margin-bottom: 25px;
+    flex-grow: 1;
+  }
+
+  /* Action Buttons */
+  .ubm-card-btn {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  .btn-blue {
+    background-color: #1793c9;
+  }
+  .btn-blue:hover {
+    background-color: #11729c;
+  }
+
+  .btn-orange {
+    background-color: #e35a33;
+  }
+  .btn-orange:hover {
+    background-color: #c74521;
+  }
+
+  /* Mobile Responsive Settings */
+  @media (max-width: 992px) {
+    .ubm-cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ubm-cards-grid {
+      grid-template-columns: 1fr;
+    }
+    .ubm-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .ubm-main-heading {
+      font-size: 28px;
+    }
+  }
+</style>
+
+<section class="ubm-difference-section">
+  <div class="ubm-container">
+    
+    <!-- Header Section -->
+    <div class="ubm-header">
+      <div class="ubm-title-area">
+        <div class="ubm-subtitle">The Difference</div>
+        <h2 class="ubm-main-heading">Why Choose UBM Pakistan?</h2>
+        <p class="ubm-description">
+          At UBM Pakistan, we focus on practical digital skills, professional guidance and real learning experiences. Our goal is to help students build confidence, develop valuable skills and explore opportunities in the global digital marketplace.
         </p>
       </div>
-
-      <a class="ubm-help-box"
-         href="https://wa.me/923040880992"
-         target="_blank">
-        <span class="ubm-help-icon">☎</span>
-        <span>
-          <b>Need Help?</b>
-          <strong>Contact UBM Pakistan</strong>
-        </span>
+      <a href="https://wa.me/923040880992" class="ubm-help-btn" target="_blank">
+        <i class="fa-solid fa-phone-volume"></i>
+        <span>Need Help? +923040880992</span>
       </a>
-
     </div>
 
-
-    <!-- Four Feature Cards -->
-    <div class="ubm-difference-grid">
-
-
-      <!-- CARD 1: EBAY -->
-      <article class="ubm-difference-card">
-
-        <div class="ubm-card-icon ebay-logo">
-          <span>e</span><span>b</span><span>a</span><span>y</span>
+    <!-- 4 Cards Grid Area -->
+    <div class="ubm-cards-grid">
+      
+      <!-- CARD 1: eBay Seller Setup -->
+      <div class="ubm-card">
+        <div class="ubm-card-logo-box">
+          <!-- eBay Logo Image -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" alt="eBay Logo">
         </div>
-
-        <h3>Professional eBay Seller Training</h3>
-
-        <p>
-          Learn eBay seller account basics, product research,
-          listing creation and store management with
-          practical step-by-step guidance.
+        <h3 class="ubm-card-title">100% Free eBay Seller Account Setup</h3>
+        <p class="ubm-card-text">
+          Learn eBay seller account creation, product research, listing creation, and store management with practical step-by-step guidance.
         </p>
-
-        <a href="#courses" class="ubm-card-btn">
-          Start Your eBay Journey!
+        <a href="https://usamaiftikhar2580-sketch.github.io/ubm-pakistan-admission.github.io/index.html#courses" class="ubm-card-btn btn-blue">
+          Start Your Ecommerce Journey for Free!
         </a>
+      </div>
 
-      </article>
-
-
-      <!-- CARD 2: PRACTICAL TRAINING -->
-      <article class="ubm-difference-card">
-
-        <div class="ubm-card-icon">
-          <svg viewBox="0 0 64 64">
-            <rect x="9" y="12" width="46" height="34" rx="4"/>
-            <path d="M20 55h24M32 46v9M18 34l9-10 8 7 12-14"/>
-            <path d="M42 17h5v5"/>
-          </svg>
+      <!-- CARD 2: Practical Skill Development (Investment replacement) -->
+      <div class="ubm-card">
+        <div class="ubm-card-logo-box">
+          <!-- Logo / Icon Vector -->
+          <i class="fa-solid fa-chart-line" style="font-size: 50px; color: #e35a33;"></i>
         </div>
-
-        <h3>Practical E-Commerce Training</h3>
-
-        <p>
-          Learn online business skills through practical
-          lessons, product research, marketplace knowledge
-          and real-world learning activities.
+        <h3 class="ubm-card-title">Practical Skill Development</h3>
+        <p class="ubm-card-text">
+          Learn online business skills through practical lessons, product research, marketplace knowledge and real-world learning activities.
         </p>
-
-        <a href="#courses" class="ubm-card-btn">
+        <a href="https://usamaiftikhar2580-sketch.github.io/ubm-pakistan-admission.github.io/index.html#courses" class="ubm-card-btn btn-orange">
           Learn Practical Skills!
         </a>
+      </div>
 
-      </article>
-
-
-      <!-- CARD 3: GLOBAL OPPORTUNITIES -->
-      <article class="ubm-difference-card">
-
-        <div class="ubm-card-icon">
-          <svg viewBox="0 0 64 64">
-            <circle cx="32" cy="32" r="23"/>
-            <path d="M9 32h46M32 9c12 12 12 34 0 46M32 9c-12 12-12 34 0 46"/>
-            <path d="M14 20h36M14 44h36"/>
-          </svg>
+      <!-- CARD 3: Global Business Opportunities -->
+      <div class="ubm-card">
+        <div class="ubm-card-logo-box">
+          <!-- Logo / Icon Vector -->
+          <i class="fa-solid fa-globe" style="font-size: 50px; color: #1793c9;"></i>
         </div>
-
-        <h3>Global Business Opportunities</h3>
-
-        <p>
-          Explore freelancing, e-commerce and international
-          marketplaces. Develop skills that can help you
-          connect with opportunities around the world.
+        <h3 class="ubm-card-title">Global Business Opportunities</h3>
+        <p class="ubm-card-text">
+          Explore freelancing, e-commerce and international marketplaces. Develop skills that can help you connect with opportunities around the world.
         </p>
-
-        <a href="#courses" class="ubm-card-btn">
+        <a href="https://usamaiftikhar2580-sketch.github.io/ubm-pakistan-admission.github.io/index.html#courses" class="ubm-card-btn btn-blue">
           Explore Global Opportunities!
         </a>
+      </div>
 
-      </article>
-
-
-      <!-- CARD 4: LIFETIME SUPPORT -->
-      <article class="ubm-difference-card">
-
-        <div class="ubm-card-icon">
-          <svg viewBox="0 0 64 64">
-            <path d="M32 54S7 40 7 23C7 7 26 4 32 17
-            C38 4 57 7 57 23C57 40 32 54 32 54Z"/>
-            <path d="m19 32 8 8 18-19"/>
-          </svg>
+      <!-- CARD 4: Lifetime Student Support -->
+      <div class="ubm-card">
+        <div class="ubm-card-logo-box">
+          <!-- Logo / Icon Vector -->
+          <i class="fa-solid fa-handshake" style="font-size: 50px; color: #e35a33;"></i>
         </div>
-
-        <h3>Lifetime Student Support</h3>
-
-        <p>
-          Your learning journey does not end with the course.
-          Get continued guidance, learning assistance and
-          support from the UBM Pakistan team.
+        <h3 class="ubm-card-title">Lifetime Student Support</h3>
+        <p class="ubm-card-text">
+          Your learning journey does not end with the course. Get continued guidance, learning assistance and support from the UBM Pakistan team.
         </p>
-
-        <a href="https://wa.me/923040880992"
-           target="_blank"
-           class="ubm-card-btn">
+        <a href="https://wa.me/923040880992" class="ubm-card-btn btn-orange" target="_blank">
           We Are Here to Help!
         </a>
-
-      </article>
+      </div>
 
     </div>
-
   </div>
-
 </section>
-```
+<!-- ================= UBM DIFFERENCE SECTION END ================= -->
 
 
 <style>
